@@ -1,0 +1,8 @@
+{
+  "name": "RedGrowth.partners",
+  "description": "Dominate AI search and Reddit. We engineer consensus in high-intent communities to secure citations in ChatGPT, Perplexity, and Google AI Overviews.",
+  "prompt": "B2B Community Marketing & AI Search Visibility (AEO)",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

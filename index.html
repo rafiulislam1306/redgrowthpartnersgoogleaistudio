@@ -55,7 +55,10 @@
 <link href="assets/css/style.css" rel="stylesheet"/>
 <!-- Inline Styles for Decorative Elements -->
 <style>
-        html { scroll-behavior: smooth; }
+        html { 
+            scroll-behavior: smooth; 
+            scroll-padding-top: 80px;
+        }
         body { font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
         
         .stylized-underline {
@@ -1862,31 +1865,9 @@ function copyClaudePrompt(btn) {
     });
     setTimeout(loadTracking, 4000);
     </script>
-    <!-- Lenis 1.1.14 Smooth Momentum Scroll (Locally Vendored) -->
-    <script src="assets/js/vendor/lenis.min.js"></script>
+    <!-- High-Performance Native Scrolling (Zero Input Lag, Full 120Hz/60Hz OS Inertia) -->
     <script>
-      (function initLenis() {
-        if (typeof Lenis === 'undefined') {
-          console.warn('Lenis smooth scroll library not detected. Falling back to native scrolling.');
-          return;
-        }
-
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-          return;
-        }
-        
-        const lenis = new Lenis({
-          lerp: 0.1,
-          smoothWheel: true,
-          syncTouch: false
-        });
-
-        function raf(time) {
-          lenis.raf(time);
-          requestAnimationFrame(raf);
-        }
-        requestAnimationFrame(raf);
-
+      (function initNativeAnchorScroll() {
         document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
           anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
@@ -1894,10 +1875,12 @@ function copyClaudePrompt(btn) {
             const target = document.querySelector(href);
             if (target) {
               e.preventDefault();
-              lenis.scrollTo(target, {
-                offset: -80,
-                duration: 0.04,
-                easing: function(t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); }
+              const navOffset = 80;
+              const elementPosition = target.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - navOffset;
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
               });
               if (history.pushState) {
                 history.pushState(null, null, href);
