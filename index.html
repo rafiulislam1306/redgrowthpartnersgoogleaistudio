@@ -101,12 +101,13 @@
 </span>
 </a>
 <!-- Center: Desktop Links -->
-<nav class="hidden lg:flex items-center gap-4 xl:gap-6">
+<nav class="hidden lg:flex items-center gap-3.5 xl:gap-5">
 <a class="text-[14px] xl:text-[15px] font-medium text-slate-300 hover:text-white transition-colors" href="#clients">Who It's For</a>
 <a class="text-[14px] xl:text-[15px] font-medium text-slate-300 hover:text-white transition-colors" href="#framework">AEO Framework</a>
+<a class="text-[14px] xl:text-[15px] font-medium text-slate-300 hover:text-white transition-colors" href="#roadmap">30-Day Plan</a>
 <a class="text-[14px] xl:text-[15px] font-medium text-slate-300 hover:text-white transition-colors" href="#compliance">FTC Compliance</a>
 <a class="text-[14px] xl:text-[15px] font-medium text-slate-300 hover:text-white transition-colors" href="#results">Case Studies</a>
-<a class="text-[14px] xl:text-[15px] font-medium text-slate-300 hover:text-white transition-colors" href="#pricing">Pricing</a>
+<a class="text-[14px] xl:text-[15px] font-medium text-slate-300 hover:text-white transition-colors" href="#pricing">Pricing &amp; ROI</a>
 <a class="text-[14px] xl:text-[15px] font-medium text-slate-300 hover:text-white transition-colors" href="#faq">FAQ</a>
 <a class="text-[14px] xl:text-[15px] font-medium text-slate-300 hover:text-white transition-colors" href="#fit">Not a Fit?</a>
 </nav>
@@ -129,9 +130,10 @@
 <div class="hidden absolute top-full left-0 w-full bg-[#0B1120]/95 backdrop-blur-md shadow-2xl border-b border-white/10 px-6 py-6 flex-col gap-4 z-50 lg:hidden transform transition-all duration-300 origin-top" id="mobileMenu">
 <a class="mobile-nav-link text-base font-semibold text-slate-200 hover:text-coral py-2 border-b border-white/5" href="#clients">Who It's For</a>
 <a class="mobile-nav-link text-base font-semibold text-slate-200 hover:text-coral py-2 border-b border-white/5" href="#framework">AEO Framework</a>
+<a class="mobile-nav-link text-base font-semibold text-slate-200 hover:text-coral py-2 border-b border-white/5" href="#roadmap">30-Day Plan</a>
 <a class="mobile-nav-link text-base font-semibold text-slate-200 hover:text-coral py-2 border-b border-white/5" href="#compliance">FTC Compliance</a>
 <a class="mobile-nav-link text-base font-semibold text-slate-200 hover:text-coral py-2 border-b border-white/5" href="#results">Case Studies</a>
-<a class="mobile-nav-link text-base font-semibold text-slate-200 hover:text-coral py-2 border-b border-white/5" href="#pricing">Pricing</a>
+<a class="mobile-nav-link text-base font-semibold text-slate-200 hover:text-coral py-2 border-b border-white/5" href="#pricing">Pricing &amp; ROI</a>
 <a class="mobile-nav-link text-base font-semibold text-slate-200 hover:text-coral py-2 border-b border-white/5" href="#faq">FAQ</a>
 <a class="mobile-nav-link text-base font-semibold text-slate-200 hover:text-coral py-2 border-b border-white/5" href="#fit">Not a Fit?</a>
 <a class="mobile-nav-link mt-2 w-full btn-conic-glow-container btn-interactive hover:-translate-y-0.5" href="#audit">
@@ -1053,6 +1055,341 @@ AEO Dominance Metric
 </div>
 </div>
 </section>
+
+<!-- Section 5B: The 30-Day Operational Deliverables Roadmap -->
+<section class="py-24 relative overflow-hidden bg-[#0B1120] border-t border-white/5 scroll-mt-24" id="roadmap">
+  <!-- Ambient Radial Glows -->
+  <div class="absolute top-1/3 left-10 w-[550px] h-[450px] bg-blue-600/10 blur-[140px] pointer-events-none -z-10" aria-hidden="true"></div>
+  <div class="absolute bottom-10 right-10 w-[500px] h-[400px] bg-coral/10 blur-[130px] pointer-events-none -z-10" aria-hidden="true"></div>
+
+  <div class="max-w-[1200px] mx-auto px-4 sm:px-6 relative z-10">
+    <!-- Header -->
+    <div class="flex flex-col items-center mb-14 text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 font-bold text-[11px] tracking-[0.08em] uppercase mb-4 shadow-sm">
+        <svg class="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+        <span>OPERATIONAL TRANSPARENCY • FULFILLMENT PLAYBOOK</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl md:text-[46px] font-bold text-white tracking-tight leading-tight mb-4">
+        The 30-Day <span class="font-serif italic font-normal text-coral">Deliverables</span> Roadmap.
+      </h2>
+      <p class="text-[16px] sm:text-[18px] text-slate-300 max-w-3xl leading-relaxed">
+        Zero black-box agency promises. Here is the exact week-by-week operational breakdown: what we build, what your team reviews, and the tangible assets you own in your first 30 days.
+      </p>
+    </div>
+
+    <!-- Interactive Sprint Selector Tabs -->
+    <div class="flex items-center justify-center mb-10 overflow-x-auto pb-2 scrollbar-none" role="tablist" aria-label="30-Day Roadmap Sprints">
+      <div class="inline-flex p-1.5 rounded-2xl bg-[#15213A]/90 border border-white/10 backdrop-blur-md gap-1 sm:gap-2">
+        <button id="tabSprint1" role="tab" aria-selected="true" aria-controls="panelSprint1" class="sprint-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-coral text-[#0B1120] shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral">
+          Days 1–7 • Reconnaissance
+        </button>
+        <button id="tabSprint2" role="tab" aria-selected="false" aria-controls="panelSprint2" class="sprint-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all text-slate-300 hover:text-white hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral">
+          Days 8–14 • Governance
+        </button>
+        <button id="tabSprint3" role="tab" aria-selected="false" aria-controls="panelSprint3" class="sprint-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all text-slate-300 hover:text-white hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral">
+          Days 15–24 • Seeding
+        </button>
+        <button id="tabSprint4" role="tab" aria-selected="false" aria-controls="panelSprint4" class="sprint-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all text-slate-300 hover:text-white hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral">
+          Days 25–30 • Citation Lift
+        </button>
+      </div>
+    </div>
+
+    <!-- Sprint Content Panels -->
+    <div class="relative min-h-[460px] mb-12">
+      <!-- Sprint 1 Panel -->
+      <div id="panelSprint1" role="tabpanel" class="sprint-panel glass-card-elevated p-6 sm:p-10 rounded-3xl border border-white/10 transition-opacity duration-300">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-7">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/15 text-blue-300 font-mono text-xs font-semibold uppercase mb-4 border border-blue-500/30">
+              <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+              Sprint 1 • Days 1 to 7
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-bold text-white mb-3">Subreddit &amp; Query Reconnaissance</h3>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+              Before a single word is posted, we map your entire category across Reddit, ChatGPT, Perplexity, and Google AI Overviews. We find the exact comparison queries where buyers ask for recommendations and baseline your visibility.
+            </p>
+            <div class="space-y-3.5 mb-8">
+              <div class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <div class="text-sm text-slate-200">
+                  <strong class="text-white">50+ Target Subreddits Scored:</strong> Filtered by strict moderator rules, karma barriers, active member volume, and unbranded query velocity.
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <div class="text-sm text-slate-200">
+                  <strong class="text-white">AI Search Baseline Audit:</strong> 30 benchmark queries tested across ChatGPT 4o, Perplexity Pro, and Gemini to log where competitors currently outrank you.
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <div class="text-sm text-slate-200">
+                  <strong class="text-white">WebMCP &amp; Schema Gap Map:</strong> Review of your domain's structured data and llms.txt accessibility for search bots.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-5 bg-[#0B1120]/90 rounded-2xl p-6 border border-white/10">
+            <h4 class="text-xs font-mono uppercase tracking-wider text-slate-400 mb-4 pb-2 border-b border-white/10">Sprint 1 Deliverables Dossier</h4>
+            <div class="space-y-4 text-xs font-mono">
+              <div class="p-3 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                  <span class="text-blue-400">📄</span>
+                  <span class="text-white font-semibold">Subreddit_Targeting_Matrix.xlsx</span>
+                </div>
+                <span class="text-emerald-400 font-bold">DELIVERED</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                  <span class="text-blue-400">📊</span>
+                  <span class="text-white font-semibold">AEO_Baseline_Citation_Report.pdf</span>
+                </div>
+                <span class="text-emerald-400 font-bold">DELIVERED</span>
+              </div>
+              <div class="pt-2 text-slate-300 space-y-2 border-t border-white/10">
+                <div class="flex justify-between"><span class="text-slate-400">Client Time Investment:</span> <span class="text-white font-bold">45-min kickoff</span></div>
+                <div class="flex justify-between"><span class="text-slate-400">Access Needed:</span> <span class="text-white font-bold">None (zero passwords)</span></div>
+                <div class="flex justify-between"><span class="text-slate-400">Brand Safety:</span> <span class="text-emerald-400 font-bold">100% Observation Only</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sprint 2 Panel -->
+      <div id="panelSprint2" role="tabpanel" class="sprint-panel glass-card-elevated p-6 sm:p-10 rounded-3xl border border-white/10 transition-opacity duration-300 hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-7">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/15 text-purple-300 font-mono text-xs font-semibold uppercase mb-4 border border-purple-500/30">
+              <span class="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span>
+              Sprint 2 • Days 8 to 14
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-bold text-white mb-3">Narrative Architecture &amp; FTC Governance</h3>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+              You never have to wonder what is being said. We construct every narrative angle, calibration guide, and discussion seed into an interactive approval deck for your review and explicit sign-off.
+            </p>
+            <div class="space-y-3.5 mb-8">
+              <div class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <div class="text-sm text-slate-200">
+                  <strong class="text-white">100% Pre-Approved Comment Angles:</strong> Every single talking point is reviewed by your team. No spontaneous claims, no unauthorized promises.
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <div class="text-sm text-slate-200">
+                  <strong class="text-white">Persona Voice Calibration:</strong> Assigning 8–12 aged accounts with real residential IP proxies and authentic karma history relevant to your technical niche.
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <div class="text-sm text-slate-200">
+                  <strong class="text-white">FTC 90/10 Ratio Protocol:</strong> Establishing our strict guardrail—9 helpful, non-promotional category answers for every 1 brand mention.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-5 bg-[#0B1120]/90 rounded-2xl p-6 border border-white/10">
+            <h4 class="text-xs font-mono uppercase tracking-wider text-slate-400 mb-4 pb-2 border-b border-white/10">Sprint 2 Deliverables Dossier</h4>
+            <div class="space-y-4 text-xs font-mono">
+              <div class="p-3 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                  <span class="text-purple-400">🛡️</span>
+                  <span class="text-white font-semibold">Brand_Narrative_Deck.pdf</span>
+                </div>
+                <span class="text-emerald-400 font-bold">CLIENT SIGNED</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                  <span class="text-purple-400">⚙️</span>
+                  <span class="text-white font-semibold">llms_txt_Schema_Directives.json</span>
+                </div>
+                <span class="text-emerald-400 font-bold">DEPLOY READY</span>
+              </div>
+              <div class="pt-2 text-slate-300 space-y-2 border-t border-white/10">
+                <div class="flex justify-between"><span class="text-slate-400">Client Time Investment:</span> <span class="text-white font-bold">1 hour async review</span></div>
+                <div class="flex justify-between"><span class="text-slate-400">Veto Power:</span> <span class="text-white font-bold">100% Client Approval</span></div>
+                <div class="flex justify-between"><span class="text-slate-400">FTC Penalty Shield:</span> <span class="text-emerald-400 font-bold">Zero astroturfing</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sprint 3 Panel -->
+      <div id="panelSprint3" role="tabpanel" class="sprint-panel glass-card-elevated p-6 sm:p-10 rounded-3xl border border-white/10 transition-opacity duration-300 hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-7">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/15 text-orange-300 font-mono text-xs font-semibold uppercase mb-4 border border-orange-500/30">
+              <span class="w-2 h-2 rounded-full bg-orange-400 animate-pulse"></span>
+              Sprint 3 • Days 15 to 24
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-bold text-white mb-3">Organic Seeding &amp; Discussion Stewardship</h3>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+              Our seasoned community strategists execute the pre-approved narratives in active, ranking threads. We build authentic peer consensus and handle technical follow-up questions in real-time.
+            </p>
+            <div class="space-y-3.5 mb-8">
+              <div class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <div class="text-sm text-slate-200">
+                  <strong class="text-white">Human-Written Contributions:</strong> 0% AI-generated text, 0% automated bot upvoting. Every reply reads like an authentic practitioner solving a real problem.
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <div class="text-sm text-slate-200">
+                  <strong class="text-white">Conservative Link-Mix:</strong> 80% unlinked brand validation and 20% contextual resource links to completely prevent spam flags or moderator scrutiny.
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <div class="text-sm text-slate-200">
+                  <strong class="text-white">Real-Time Sentiment Monitoring:</strong> Tracking thread upvotes, community feedback, and competitor mentions as discussions evolve.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-5 bg-[#0B1120]/90 rounded-2xl p-6 border border-white/10">
+            <h4 class="text-xs font-mono uppercase tracking-wider text-slate-400 mb-4 pb-2 border-b border-white/10">Sprint 3 Deliverables Dossier</h4>
+            <div class="space-y-4 text-xs font-mono">
+              <div class="p-3 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                  <span class="text-orange-400">🔗</span>
+                  <span class="text-white font-semibold">Live_Thread_Permalinks.csv</span>
+                </div>
+                <span class="text-emerald-400 font-bold">REAL-TIME</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                  <span class="text-orange-400">📈</span>
+                  <span class="text-white font-semibold">Sentiment_Velocity_Radar.json</span>
+                </div>
+                <span class="text-emerald-400 font-bold">98.4% POSITIVE</span>
+              </div>
+              <div class="pt-2 text-slate-300 space-y-2 border-t border-white/10">
+                <div class="flex justify-between"><span class="text-slate-400">Client Time Investment:</span> <span class="text-white font-bold">0 hours (Turnkey)</span></div>
+                <div class="flex justify-between"><span class="text-slate-400">Account Safety:</span> <span class="text-emerald-400 font-bold">Residential Fingerprinted</span></div>
+                <div class="flex justify-between"><span class="text-slate-400">Mod Ban Rate:</span> <span class="text-emerald-400 font-bold">&lt; 0.1% Historical</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sprint 4 Panel -->
+      <div id="panelSprint4" role="tabpanel" class="sprint-panel glass-card-elevated p-6 sm:p-10 rounded-3xl border border-white/10 transition-opacity duration-300 hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-7">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-300 font-mono text-xs font-semibold uppercase mb-4 border border-emerald-500/30">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              Sprint 4 • Days 25 to 30
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-bold text-white mb-3">AI Search Ingestion &amp; CFO Pipeline Proof</h3>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+              AI crawlers re-index Reddit threads rapidly. We verify live citation pickups in Perplexity Pro and ChatGPT Search, deploy Self-Reported Attribution to capture dark social leads, and deliver your executive ROI brief.
+            </p>
+            <div class="space-y-3.5 mb-8">
+              <div class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <div class="text-sm text-slate-200">
+                  <strong class="text-white">Live Citation Verification:</strong> Querying Perplexity, ChatGPT, and Google AI Overviews to prove your brand is now cited as a primary recommendation.
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <div class="text-sm text-slate-200">
+                  <strong class="text-white">Dark Social Attribution Integration:</strong> Adding a simple, friction-free "How did you hear about us?" field on demo forms to capture Reddit/ChatGPT referrals that GA4 misses.
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <div class="text-sm text-slate-200">
+                  <strong class="text-white">Next 30-Day Scale Roadmap:</strong> Clear review of performance against initial sprint goals. No 12-month lock-in; you only renew if the pipeline velocity is proven.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-5 bg-[#0B1120]/90 rounded-2xl p-6 border border-white/10">
+            <h4 class="text-xs font-mono uppercase tracking-wider text-slate-400 mb-4 pb-2 border-b border-white/10">Sprint 4 Deliverables Dossier</h4>
+            <div class="space-y-4 text-xs font-mono">
+              <div class="p-3 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                  <span class="text-emerald-400">📊</span>
+                  <span class="text-white font-semibold">Executive_AEO_Uplift_Brief.pdf</span>
+                </div>
+                <span class="text-emerald-400 font-bold">DELIVERED</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                  <span class="text-emerald-400">🎯</span>
+                  <span class="text-white font-semibold">Dark_Social_Pipeline_Report.xlsx</span>
+                </div>
+                <span class="text-emerald-400 font-bold">VERIFIED</span>
+              </div>
+              <div class="pt-2 text-slate-300 space-y-2 border-t border-white/10">
+                <div class="flex justify-between"><span class="text-slate-400">Client Time Investment:</span> <span class="text-white font-bold">30-min strategy review</span></div>
+                <div class="flex justify-between"><span class="text-slate-400">Contract Term:</span> <span class="text-white font-bold">Rolling 30-day (cancel anytime)</span></div>
+                <div class="flex justify-between"><span class="text-slate-400">Outcome:</span> <span class="text-emerald-400 font-bold">Measurable Inbound Lift</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4-Sprint Quick Reference Matrix -->
+    <div class="bg-[#15213A]/60 border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
+        <div class="pt-3 md:pt-0 px-2">
+          <div class="text-xs font-mono text-blue-400 uppercase font-semibold mb-1">Week 1</div>
+          <div class="text-sm font-bold text-white mb-0.5">Reconnaissance</div>
+          <div class="text-xs text-slate-400">Audit &amp; Subreddit Matrix</div>
+        </div>
+        <div class="pt-3 md:pt-0 px-2">
+          <div class="text-xs font-mono text-purple-400 uppercase font-semibold mb-1">Week 2</div>
+          <div class="text-sm font-bold text-white mb-0.5">Governance</div>
+          <div class="text-xs text-slate-400">100% Client Pre-Approval</div>
+        </div>
+        <div class="pt-3 md:pt-0 px-2">
+          <div class="text-xs font-mono text-orange-400 uppercase font-semibold mb-1">Week 3</div>
+          <div class="text-sm font-bold text-white mb-0.5">Consensus Seeding</div>
+          <div class="text-xs text-slate-400">90/10 Ratio Execution</div>
+        </div>
+        <div class="pt-3 md:pt-0 px-2">
+          <div class="text-xs font-mono text-emerald-400 uppercase font-semibold mb-1">Week 4</div>
+          <div class="text-sm font-bold text-white mb-0.5">Attribution &amp; ROI</div>
+          <div class="text-xs text-slate-400">Executive Citation Proof</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Section 6: Pipeline Over Pageviews (Real Results) -->
 <section class="py-24 relative overflow-hidden bg-[#0B1120] border-t border-white/5 scroll-mt-24" id="results">
 <!-- Ambient Radial Glows (Design Monks Elevation) -->
@@ -1365,6 +1702,137 @@ AEO Dominance Metric
 <p class="text-sm text-slate-400 font-medium">Looking for customized multi-brand governance, international localization, or private account infrastructure? <a href="#fit" class="text-white font-bold underline hover:text-coral transition-colors">Explore our Custom Enterprise Retainer below</a> or <a href="#audit" class="text-coral font-bold underline hover:text-white transition-colors">request an audit</a>.</p>
 </div>
 
+<!-- Interactive AI Search Pipeline & CAC Payback Calculator -->
+<div class="mt-16 bg-[#15213A]/90 backdrop-blur-md rounded-3xl p-6 sm:p-10 border border-white/10 shadow-2xl relative overflow-hidden" id="calculator">
+  <!-- Subtle ambient glow -->
+  <div class="absolute -top-24 -right-24 w-72 h-72 bg-coral/10 blur-3xl pointer-events-none" aria-hidden="true"></div>
+  <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-blue-600/10 blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+  <div class="text-center max-w-2xl mx-auto mb-10 relative z-10">
+    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 font-bold text-[11px] tracking-widest uppercase mb-4 shadow-sm border border-emerald-500/30">
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+      UNIT ECONOMICS &bull; FINANCIAL PROJECTION
+    </div>
+    <h3 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight mb-3">
+      Calculate Your <span class="font-serif italic font-normal text-coral">Pipeline ROI</span> &amp; Payback.
+    </h3>
+    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+      Model your inbound demo lift and ad burn reduction based on your actual contract size. Discerning B2B leaders run the math first.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+    <!-- Left Column: Inputs & Sliders (7 cols) -->
+    <div class="lg:col-span-7 space-y-6 bg-[#0B1120]/80 p-6 sm:p-8 rounded-2xl border border-white/10">
+      <!-- Input 1: ACV -->
+      <div>
+        <div class="flex items-center justify-between mb-2">
+          <label for="calcAcv" class="text-sm font-bold text-white flex items-center gap-2">
+            <span>Average Contract Value (ACV)</span>
+          </label>
+          <span id="calcAcvVal" class="text-base sm:text-lg font-mono font-extrabold text-coral">$30,000</span>
+        </div>
+        <input type="range" id="calcAcv" min="10000" max="120000" step="5000" value="30000" class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-coral focus:outline-none focus-visible:ring-2 focus-visible:ring-coral" aria-label="Average Contract Value slider" />
+        <div class="flex justify-between items-center text-[11px] font-mono text-slate-400 mt-2">
+          <span>$10k</span>
+          <div class="flex gap-1.5">
+            <button type="button" class="calc-acv-preset px-2 py-0.5 rounded bg-white/5 hover:bg-white/10 text-slate-300 text-[10px]" data-value="15000">$15k</button>
+            <button type="button" class="calc-acv-preset px-2 py-0.5 rounded bg-white/5 hover:bg-white/10 text-slate-300 text-[10px]" data-value="30000">$30k</button>
+            <button type="button" class="calc-acv-preset px-2 py-0.5 rounded bg-white/5 hover:bg-white/10 text-slate-300 text-[10px]" data-value="60000">$60k</button>
+            <button type="button" class="calc-acv-preset px-2 py-0.5 rounded bg-white/5 hover:bg-white/10 text-slate-300 text-[10px]" data-value="100000">$100k</button>
+          </div>
+          <span>$120k</span>
+        </div>
+      </div>
+
+      <!-- Input 2: Monthly Inbound Demos -->
+      <div>
+        <div class="flex items-center justify-between mb-2">
+          <label for="calcDemos" class="text-sm font-bold text-white flex items-center gap-2">
+            <span>Current Monthly Inbound Demos</span>
+          </label>
+          <span id="calcDemosVal" class="text-base sm:text-lg font-mono font-extrabold text-blue-400">20 demos/mo</span>
+        </div>
+        <input type="range" id="calcDemos" min="5" max="100" step="5" value="20" class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-blue-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400" aria-label="Current Monthly Inbound Demos slider" />
+        <div class="flex justify-between items-center text-[11px] font-mono text-slate-400 mt-2">
+          <span>5</span>
+          <div class="flex gap-1.5">
+            <button type="button" class="calc-demos-preset px-2 py-0.5 rounded bg-white/5 hover:bg-white/10 text-slate-300 text-[10px]" data-value="10">10</button>
+            <button type="button" class="calc-demos-preset px-2 py-0.5 rounded bg-white/5 hover:bg-white/10 text-slate-300 text-[10px]" data-value="20">20</button>
+            <button type="button" class="calc-demos-preset px-2 py-0.5 rounded bg-white/5 hover:bg-white/10 text-slate-300 text-[10px]" data-value="40">40</button>
+            <button type="button" class="calc-demos-preset px-2 py-0.5 rounded bg-white/5 hover:bg-white/10 text-slate-300 text-[10px]" data-value="80">80</button>
+          </div>
+          <span>100</span>
+        </div>
+      </div>
+
+      <!-- Input 3: Current CAC -->
+      <div>
+        <div class="flex items-center justify-between mb-2">
+          <label for="calcCac" class="text-sm font-bold text-white flex items-center gap-2">
+            <span>Current Paid Search / Outbound CAC</span>
+          </label>
+          <span id="calcCacVal" class="text-base sm:text-lg font-mono font-extrabold text-emerald-400">$4,000</span>
+        </div>
+        <input type="range" id="calcCac" min="1000" max="10000" step="500" value="4000" class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-emerald-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400" aria-label="Current CAC slider" />
+        <div class="flex justify-between items-center text-[11px] font-mono text-slate-400 mt-2">
+          <span>$1k</span>
+          <div class="flex gap-1.5">
+            <button type="button" class="calc-cac-preset px-2 py-0.5 rounded bg-white/5 hover:bg-white/10 text-slate-300 text-[10px]" data-value="2000">$2k</button>
+            <button type="button" class="calc-cac-preset px-2 py-0.5 rounded bg-white/5 hover:bg-white/10 text-slate-300 text-[10px]" data-value="4000">$4k</button>
+            <button type="button" class="calc-cac-preset px-2 py-0.5 rounded bg-white/5 hover:bg-white/10 text-slate-300 text-[10px]" data-value="6000">$6k</button>
+            <button type="button" class="calc-cac-preset px-2 py-0.5 rounded bg-white/5 hover:bg-white/10 text-slate-300 text-[10px]" data-value="8000">$8k</button>
+          </div>
+          <span>$10k</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Live Output Metrics (5 cols) -->
+    <div class="lg:col-span-5 flex flex-col justify-between space-y-4">
+      <div class="grid grid-cols-2 gap-3.5" aria-live="polite">
+        <!-- Metric 1: Demo Lift -->
+        <div class="p-4 rounded-xl bg-[#0B1120]/90 border border-blue-500/20">
+          <div class="text-[11px] font-mono uppercase text-slate-400 mb-1">AI Demo Lift</div>
+          <div id="outDemoLift" class="text-2xl sm:text-3xl font-black text-blue-400">+5 / mo</div>
+          <div class="text-[11px] text-slate-400 mt-1">+25% unbranded lift</div>
+        </div>
+
+        <!-- Metric 2: Ad Spend Saved -->
+        <div class="p-4 rounded-xl bg-[#0B1120]/90 border border-emerald-500/20">
+          <div class="text-[11px] font-mono uppercase text-slate-400 mb-1">Ad Burn Replaced</div>
+          <div id="outAdSaved" class="text-2xl sm:text-3xl font-black text-emerald-400">$20,000/mo</div>
+          <div class="text-[11px] text-slate-400 mt-1">Displaced search spend</div>
+        </div>
+
+        <!-- Metric 3: Pipeline Created -->
+        <div class="col-span-2 p-4 sm:p-5 rounded-xl bg-[#0B1120]/90 border border-coral/30">
+          <div class="flex items-center justify-between mb-1">
+            <div class="text-[11px] font-mono uppercase text-slate-400">Incremental Annual Pipeline</div>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-coral/20 text-coral-light font-bold">20% Close Rate</span>
+          </div>
+          <div id="outPipeline" class="text-3xl sm:text-4xl font-black text-coral">+$360,000 / yr</div>
+          <div class="text-xs text-slate-300 mt-1.5 flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+            <span>Net new closed ARR: <strong id="outArr" class="text-white">$72,000/yr</strong></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Payback Banner -->
+      <div class="p-4 rounded-xl bg-gradient-to-r from-blue-900/30 via-purple-900/20 to-orange-900/30 border border-white/10 flex items-center justify-between gap-3">
+        <div>
+          <div class="text-[11px] font-mono text-slate-400 uppercase">Growth Retainer Payback</div>
+          <div id="outPayback" class="text-sm sm:text-base font-extrabold text-white">&lt; 1 Closed Deal (21 Days)</div>
+        </div>
+        <a href="https://calendly.com/dmericcoleman/30min" target="_blank" rel="noopener" class="shrink-0 bg-coral text-[#0B1120] text-xs font-bold py-2 px-4 rounded-full hover:bg-orange-400 transition-all shadow-md btn-interactive">
+          Model My Category &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Economic Comparison Matrix (Pillar 4) -->
 <div class="mt-20 pt-16 border-t border-white/10">
   <div class="text-center mb-12">
@@ -1524,27 +1992,46 @@ AEO Dominance Metric
                 </p>
 
                 <!-- Founder Audio Memo & Thesis Widget -->
-                <div class="mb-8 p-4 rounded-2xl bg-[#070B14]/80 border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-                  <div class="flex items-center gap-3">
-                    <button type="button" aria-label="Play Founder Thesis Audio" onclick="const p = this.querySelector('.play-icon'); const s = this.querySelector('.pause-icon'); p.classList.toggle('hidden'); s.classList.toggle('hidden');" class="w-10 h-10 rounded-full bg-coral text-[#0B1120] flex items-center justify-center shrink-0 hover:bg-orange-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral">
-                      <svg class="w-4 h-4 play-icon fill-current ml-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                      <svg class="w-4 h-4 pause-icon fill-current hidden" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-                    </button>
-                    <div>
-                      <div class="text-sm font-bold text-white flex items-center gap-2">
-                        <span>Why We Built RedGrowth</span>
-                        <span class="text-xs px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono">60s Audio Memo</span>
+                <div class="mb-8 p-5 rounded-2xl bg-[#070B14]/90 border border-white/10 shadow-lg">
+                  <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-3">
+                    <div class="flex items-center gap-3 w-full sm:w-auto">
+                      <button type="button" id="btnFounderAudio" aria-label="Play Founder Thesis Audio" class="w-11 h-11 rounded-full bg-coral text-[#0B1120] flex items-center justify-center shrink-0 hover:bg-orange-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral shadow-md btn-interactive">
+                        <svg class="w-5 h-5 play-icon fill-current ml-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <svg class="w-5 h-5 pause-icon fill-current hidden" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                      </button>
+                      <div class="text-left">
+                        <div class="text-sm font-bold text-white flex items-center gap-2">
+                          <span>Why We Built RedGrowth</span>
+                          <span class="text-[10px] px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono font-bold">52s Audio Memo</span>
+                        </div>
+                        <div class="text-xs text-slate-400">Authentic human consensus as the primary AI currency</div>
                       </div>
-                      <div class="text-xs text-slate-400">Authentic human consensus as the primary AI currency</div>
+                    </div>
+                    <!-- Equalizer soundwave visualizer -->
+                    <div class="flex items-center gap-1.5 h-7 px-3 py-1 rounded-lg bg-black/40 border border-white/5" id="audioEqualizer" aria-hidden="true">
+                      <div class="w-1 bg-coral rounded-full h-2 transition-all duration-150"></div>
+                      <div class="w-1 bg-coral-light rounded-full h-3 transition-all duration-150"></div>
+                      <div class="w-1 bg-blue-400 rounded-full h-4 transition-all duration-150"></div>
+                      <div class="w-1 bg-emerald-400 rounded-full h-3 transition-all duration-150"></div>
+                      <div class="w-1 bg-coral rounded-full h-2 transition-all duration-150"></div>
                     </div>
                   </div>
-                  <!-- Equalizer soundwave visualizer -->
-                  <div class="flex items-center gap-1 h-6 px-3 py-1 rounded-lg bg-black/40 border border-white/5" aria-hidden="true">
-                    <div class="w-1 bg-coral rounded-full soundwave-bar"></div>
-                    <div class="w-1 bg-coral-light rounded-full soundwave-bar"></div>
-                    <div class="w-1 bg-blue-400 rounded-full soundwave-bar"></div>
-                    <div class="w-1 bg-emerald-400 rounded-full soundwave-bar"></div>
-                    <div class="w-1 bg-coral rounded-full soundwave-bar"></div>
+
+                  <!-- Audio Scrubber / Progress -->
+                  <div class="space-y-1.5 pt-1">
+                    <div class="w-full bg-slate-800 rounded-full h-1.5 cursor-pointer relative" id="audioScrubber" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Audio progress">
+                      <div class="bg-coral h-1.5 rounded-full transition-all duration-100" id="audioProgressBar" style="width: 0%"></div>
+                    </div>
+                    <div class="flex justify-between items-center text-[11px] font-mono text-slate-400">
+                      <span id="audioCurrentTime">0:00</span>
+                      <button type="button" id="btnToggleTranscript" class="text-blue-400 hover:text-white underline transition-colors font-sans text-xs">Read Transcript</button>
+                      <span>0:52</span>
+                    </div>
+                  </div>
+
+                  <!-- Expandable Audio Transcript -->
+                  <div id="audioTranscript" class="hidden mt-4 pt-4 border-t border-white/10 text-xs text-slate-300 italic leading-relaxed text-left bg-black/30 p-3.5 rounded-xl border border-white/5">
+                    "When most marketing agencies pitch Reddit or AI Search, they treat it like Facebook Ads: blasting spam links and getting banned within 48 hours. But ChatGPT, Perplexity, and Google AI Overviews don't read marketing blogs—they read authentic human consensus. We engineer real, brand-safe community consensus so your company is the verified recommendation when high-intent buyers evaluate category solutions. 100% FTC compliant. No bots. Let's talk about your category."
                   </div>
                 </div>
 
@@ -1941,6 +2428,252 @@ function copyClaudePrompt(btn) {
             });
         });
     }
+
+    // 1B. 30-Day Operational Roadmap Tabs
+    function initRoadmapTabs() {
+        const tabs = [
+            { tab: document.getElementById('tabSprint1'), panel: document.getElementById('panelSprint1') },
+            { tab: document.getElementById('tabSprint2'), panel: document.getElementById('panelSprint2') },
+            { tab: document.getElementById('tabSprint3'), panel: document.getElementById('panelSprint3') },
+            { tab: document.getElementById('tabSprint4'), panel: document.getElementById('panelSprint4') }
+        ];
+
+        tabs.forEach((item, index) => {
+            if (!item.tab || !item.panel) return;
+            item.tab.addEventListener('click', () => {
+                tabs.forEach((t) => {
+                    t.tab.classList.remove('bg-coral', 'text-[#0B1120]', 'shadow-md');
+                    t.tab.classList.add('text-slate-300', 'hover:text-white', 'hover:bg-white/5');
+                    t.tab.setAttribute('aria-selected', 'false');
+                    t.panel.classList.add('hidden');
+                });
+                item.tab.classList.remove('text-slate-300', 'hover:text-white', 'hover:bg-white/5');
+                item.tab.classList.add('bg-coral', 'text-[#0B1120]', 'shadow-md');
+                item.tab.setAttribute('aria-selected', 'true');
+                item.panel.classList.remove('hidden');
+            });
+
+            item.tab.addEventListener('keydown', (e) => {
+                let targetIndex = null;
+                if (e.key === 'ArrowRight') targetIndex = (index + 1) % tabs.length;
+                if (e.key === 'ArrowLeft') targetIndex = (index - 1 + tabs.length) % tabs.length;
+                if (targetIndex !== null) {
+                    e.preventDefault();
+                    tabs[targetIndex].tab.focus();
+                    tabs[targetIndex].tab.click();
+                }
+            });
+        });
+    }
+    initRoadmapTabs();
+
+    // 1C. Interactive AI Search Pipeline & CAC Payback Calculator
+    function initPipelineCalculator() {
+        const acvInput = document.getElementById('calcAcv');
+        const demosInput = document.getElementById('calcDemos');
+        const cacInput = document.getElementById('calcCac');
+
+        const acvVal = document.getElementById('calcAcvVal');
+        const demosVal = document.getElementById('calcDemosVal');
+        const cacVal = document.getElementById('calcCacVal');
+
+        const outDemoLift = document.getElementById('outDemoLift');
+        const outAdSaved = document.getElementById('outAdSaved');
+        const outPipeline = document.getElementById('outPipeline');
+        const outArr = document.getElementById('outArr');
+        const outPayback = document.getElementById('outPayback');
+
+        if (!acvInput || !demosInput || !cacInput) return;
+
+        function update() {
+            const acv = parseInt(acvInput.value, 10) || 30000;
+            const demos = parseInt(demosInput.value, 10) || 20;
+            const cac = parseInt(cacInput.value, 10) || 4000;
+
+            if (acvVal) acvVal.textContent = '$' + acv.toLocaleString();
+            if (demosVal) demosVal.textContent = demos + ' demos/mo';
+            if (cacVal) cacVal.textContent = '$' + cac.toLocaleString();
+
+            const incrementalDemos = Math.max(2, Math.round(demos * 0.25));
+            const incrementalClosed = Math.max(1, Math.round(incrementalDemos * 0.20 * 12));
+            const annualPipeline = incrementalDemos * 12 * acv;
+            const annualArr = incrementalClosed * acv;
+            const monthlyAdSaved = incrementalDemos * cac;
+
+            const daysToPayback = Math.max(7, Math.round((4500 / (annualArr / 365))));
+            const paybackText = acv >= 4500 
+                ? `< 1 Closed Deal (~${Math.min(daysToPayback, 45)} Days)` 
+                : `${Math.ceil(4500 / acv)} Closed Deals`;
+
+            if (outDemoLift) outDemoLift.textContent = `+${incrementalDemos} / mo`;
+            if (outAdSaved) outAdSaved.textContent = `$${monthlyAdSaved.toLocaleString()}/mo`;
+            if (outPipeline) outPipeline.textContent = `+$${annualPipeline.toLocaleString()} / yr`;
+            if (outArr) outArr.textContent = `$${annualArr.toLocaleString()}/yr`;
+            if (outPayback) outPayback.textContent = paybackText;
+        }
+
+        [acvInput, demosInput, cacInput].forEach(inp => {
+            inp.addEventListener('input', update);
+        });
+
+        document.querySelectorAll('.calc-acv-preset').forEach(btn => {
+            btn.addEventListener('click', () => {
+                acvInput.value = btn.dataset.value;
+                update();
+            });
+        });
+        document.querySelectorAll('.calc-demos-preset').forEach(btn => {
+            btn.addEventListener('click', () => {
+                demosInput.value = btn.dataset.value;
+                update();
+            });
+        });
+        document.querySelectorAll('.calc-cac-preset').forEach(btn => {
+            btn.addEventListener('click', () => {
+                cacInput.value = btn.dataset.value;
+                update();
+            });
+        });
+
+        update();
+    }
+    initPipelineCalculator();
+
+    // 1D. Founder Audio Memo Player & Transcript
+    function initFounderAudio() {
+        const btn = document.getElementById('btnFounderAudio');
+        const playIcon = btn ? btn.querySelector('.play-icon') : null;
+        const pauseIcon = btn ? btn.querySelector('.pause-icon') : null;
+        const equalizer = document.getElementById('audioEqualizer');
+        const progressBar = document.getElementById('audioProgressBar');
+        const currentTimeDisplay = document.getElementById('audioCurrentTime');
+        const toggleTranscriptBtn = document.getElementById('btnToggleTranscript');
+        const transcriptDiv = document.getElementById('audioTranscript');
+
+        if (!btn) return;
+
+        if (toggleTranscriptBtn && transcriptDiv) {
+            toggleTranscriptBtn.addEventListener('click', () => {
+                const isHidden = transcriptDiv.classList.contains('hidden');
+                if (isHidden) {
+                    transcriptDiv.classList.remove('hidden');
+                    toggleTranscriptBtn.textContent = 'Hide Transcript';
+                } else {
+                    transcriptDiv.classList.add('hidden');
+                    toggleTranscriptBtn.textContent = 'Read Transcript';
+                }
+            });
+        }
+
+        let isPlaying = false;
+        let audioTimer = null;
+        let secondsElapsed = 0;
+        const totalDuration = 52;
+
+        const founderText = "When most marketing agencies pitch Reddit or AI Search, they treat it like Facebook Ads: blasting spam links and getting banned within 48 hours. But ChatGPT, Perplexity, and Google AI Overviews don't read marketing blogs—they read authentic human consensus. We engineer real, brand-safe community consensus so your company is the verified recommendation when high-intent buyers evaluate category solutions. 100% FTC compliant. No bots. Let's talk about your category.";
+
+        function stopAudio() {
+            isPlaying = false;
+            if (playIcon) playIcon.classList.remove('hidden');
+            if (pauseIcon) pauseIcon.classList.add('hidden');
+            if (audioTimer) {
+                clearInterval(audioTimer);
+                audioTimer = null;
+            }
+            if (equalizer) {
+                equalizer.querySelectorAll('div').forEach(b => b.classList.remove('soundwave-bar'));
+            }
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+            }
+        }
+
+        function startAudio() {
+            isPlaying = true;
+            if (playIcon) playIcon.classList.add('hidden');
+            if (pauseIcon) pauseIcon.classList.remove('hidden');
+            if (equalizer) {
+                equalizer.querySelectorAll('div').forEach(b => b.classList.add('soundwave-bar'));
+            }
+
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(founderText);
+                utterance.rate = 1.0;
+                utterance.pitch = 0.95;
+                utterance.onend = () => {
+                    stopAudio();
+                    secondsElapsed = 0;
+                    if (progressBar) progressBar.style.width = '0%';
+                    if (currentTimeDisplay) currentTimeDisplay.textContent = '0:00';
+                };
+                utterance.onerror = () => {
+                    // Graceful fallback to timer
+                };
+                window.speechSynthesis.speak(utterance);
+            }
+
+            audioTimer = setInterval(() => {
+                secondsElapsed++;
+                if (secondsElapsed > totalDuration) {
+                    stopAudio();
+                    secondsElapsed = 0;
+                }
+                const pct = (secondsElapsed / totalDuration) * 100;
+                if (progressBar) progressBar.style.width = pct + '%';
+                const mins = Math.floor(secondsElapsed / 60);
+                const secs = String(secondsElapsed % 60).padStart(2, '0');
+                if (currentTimeDisplay) currentTimeDisplay.textContent = `${mins}:${secs}`;
+            }, 1000);
+        }
+
+        btn.addEventListener('click', () => {
+            if (isPlaying) {
+                stopAudio();
+            } else {
+                startAudio();
+            }
+        });
+
+        const scrubber = document.getElementById('audioScrubber');
+        if (scrubber) {
+            scrubber.addEventListener('click', (e) => {
+                const rect = scrubber.getBoundingClientRect();
+                const pos = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+                secondsElapsed = Math.round(pos * totalDuration);
+                if (progressBar) progressBar.style.width = (pos * 100) + '%';
+                const mins = Math.floor(secondsElapsed / 60);
+                const secs = String(secondsElapsed % 60).padStart(2, '0');
+                if (currentTimeDisplay) currentTimeDisplay.textContent = `${mins}:${secs}`;
+            });
+        }
+    }
+    initFounderAudio();
+
+    // 1E. Domain Validation Feedback in Audit Form
+    function initDomainValidation() {
+        const domainInput = document.getElementById('companyDomain');
+        if (!domainInput) return;
+
+        const hint = document.createElement('div');
+        hint.id = 'domainValidationHint';
+        hint.className = 'hidden mt-2 text-xs font-mono text-emerald-400 flex items-center gap-1.5 transition-all';
+        hint.innerHTML = `<svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span id="domainValidationText">Domain ready for manual 24h AEO audit</span>`;
+        domainInput.parentNode.appendChild(hint);
+
+        domainInput.addEventListener('input', () => {
+            const val = domainInput.value.trim().toLowerCase();
+            const cleanDomain = val.replace(/^https?:\/\//, '').replace(/\/.*$/, '');
+            if (cleanDomain.includes('.') && cleanDomain.length >= 4) {
+                hint.classList.remove('hidden');
+                const text = document.getElementById('domainValidationText');
+                if (text) text.textContent = `AEO Baseline Check queued for ${cleanDomain} (24h turnaround)`;
+            } else {
+                hint.classList.add('hidden');
+            }
+        });
+    }
+    initDomainValidation();
 
     // 2. Audit Form AJAX Submission (F14 - Zero alerts, inline status & error containers)
     const auditForm = document.getElementById('auditForm');
