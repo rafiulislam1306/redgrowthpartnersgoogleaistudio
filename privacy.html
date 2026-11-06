@@ -43,7 +43,7 @@
                 <a href="/#audit" class="hidden sm:flex bg-coral text-[#0B1120] text-[14px] font-bold py-2.5 px-6 rounded-full items-center gap-2 hover:bg-orange-400 shadow-[0_0_20px_rgba(255,100,65,0.35)] btn-interactive hover:-translate-y-0.5 hover:shadow-[0_0_25px_rgba(255,100,65,0.45)] active:bg-orange-600">
                     Run AI Visibility Check &rarr;
                 </a>
-                <button aria-expanded="false" aria-label="Toggle Navigation Menu" class="lg:hidden p-2 rounded-lg text-white hover:bg-white/10 transition focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B1120] active:scale-[0.98]" id="mobileMenuBtn" type="button">
+                <button aria-expanded="false" aria-label="Toggle Navigation Menu" class="lg:hidden min-w-[44px] min-h-[44px] flex items-center justify-center p-2 rounded-xl text-white hover:bg-white/10 transition focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B1120] active:scale-95 touch-manipulation" id="mobileMenuBtn" type="button">
                     <svg class="w-6 h-6" fill="none" id="hamburgerIcon" stroke="currentColor" viewBox="0 0 24 24">
                         <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
                     </svg>
@@ -53,18 +53,44 @@
                 </button>
             </div>
             <!-- Mobile Drawer -->
-            <div class="hidden absolute top-full left-0 w-full bg-[#0B1120]/95 backdrop-blur-md shadow-2xl border-b border-white/10 px-6 py-6 flex-col gap-4 z-50 lg:hidden transform transition-all duration-300 origin-top" id="mobileMenu">
-                <a class="mobile-nav-link text-base font-semibold text-slate-200 hover:text-white py-2 border-b border-white/5" href="/#clients">Who It's For</a>
-                <a class="mobile-nav-link text-base font-semibold text-slate-200 hover:text-white py-2 border-b border-white/5" href="/#framework">AEO Framework</a>
-                <a class="mobile-nav-link text-base font-semibold text-slate-200 hover:text-white py-2 border-b border-white/5" href="/#roadmap">30-Day Plan</a>
-                <a class="mobile-nav-link text-base font-semibold text-slate-200 hover:text-white py-2 border-b border-white/5" href="/#compliance">FTC Compliance</a>
-                <a class="mobile-nav-link text-base font-semibold text-slate-200 hover:text-white py-2 border-b border-white/5" href="/#results">Case Studies</a>
-                <a class="mobile-nav-link text-base font-semibold text-slate-200 hover:text-white py-2 border-b border-white/5" href="/#pricing">Pricing &amp; ROI</a>
-                <a class="mobile-nav-link text-base font-semibold text-slate-200 hover:text-white py-2 border-b border-white/5" href="/#faq">FAQ</a>
-                <a class="mobile-nav-link text-base font-semibold text-slate-200 hover:text-white py-2 border-b border-white/5" href="/#fit">Not a Fit?</a>
-                <a class="mobile-nav-link mt-2 w-full bg-coral text-[#0B1120] text-center font-bold py-3 px-6 rounded-full flex items-center justify-center gap-2 hover:bg-orange-400 shadow-[0_0_20px_rgba(255,100,65,0.35)] btn-interactive hover:-translate-y-0.5 hover:shadow-[0_0_25px_rgba(255,100,65,0.45)] active:bg-orange-600" href="/#audit">
-                    Run AI Visibility Check &rarr;
+            <div class="hidden absolute top-full left-0 w-full max-h-[calc(100vh-80px)] overflow-y-auto bg-[#0B1120]/98 backdrop-blur-xl shadow-2xl border-b border-white/10 px-5 py-5 flex-col gap-1 z-50 lg:hidden transform transition-all duration-300 origin-top divide-y divide-white/5" id="mobileMenu">
+                <a class="mobile-nav-link flex items-center justify-between text-base font-semibold text-slate-200 hover:text-coral py-3 px-2 rounded-lg hover:bg-white/5 transition-all touch-manipulation min-h-[48px]" href="/#clients">
+                    <span>Who It's For</span>
+                    <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                 </a>
+                <a class="mobile-nav-link flex items-center justify-between text-base font-semibold text-slate-200 hover:text-coral py-3 px-2 rounded-lg hover:bg-white/5 transition-all touch-manipulation min-h-[48px]" href="/#framework">
+                    <span>AEO Framework</span>
+                    <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </a>
+                <a class="mobile-nav-link flex items-center justify-between text-base font-semibold text-slate-200 hover:text-coral py-3 px-2 rounded-lg hover:bg-white/5 transition-all touch-manipulation min-h-[48px]" href="/#roadmap">
+                    <span class="flex items-center gap-2">30-Day Plan <span class="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded bg-blue-500/20 text-blue-300 font-bold">New</span></span>
+                    <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </a>
+                <a class="mobile-nav-link flex items-center justify-between text-base font-semibold text-slate-200 hover:text-coral py-3 px-2 rounded-lg hover:bg-white/5 transition-all touch-manipulation min-h-[48px]" href="/#compliance">
+                    <span>FTC Compliance</span>
+                    <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </a>
+                <a class="mobile-nav-link flex items-center justify-between text-base font-semibold text-slate-200 hover:text-coral py-3 px-2 rounded-lg hover:bg-white/5 transition-all touch-manipulation min-h-[48px]" href="/#results">
+                    <span>Case Studies</span>
+                    <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </a>
+                <a class="mobile-nav-link flex items-center justify-between text-base font-semibold text-slate-200 hover:text-coral py-3 px-2 rounded-lg hover:bg-white/5 transition-all touch-manipulation min-h-[48px]" href="/#pricing">
+                    <span class="flex items-center gap-2">Pricing &amp; ROI <span class="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold">Calculator</span></span>
+                    <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </a>
+                <a class="mobile-nav-link flex items-center justify-between text-base font-semibold text-slate-200 hover:text-coral py-3 px-2 rounded-lg hover:bg-white/5 transition-all touch-manipulation min-h-[48px]" href="/#faq">
+                    <span>FAQ</span>
+                    <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </a>
+                <a class="mobile-nav-link flex items-center justify-between text-base font-semibold text-slate-200 hover:text-coral py-3 px-2 rounded-lg hover:bg-white/5 transition-all touch-manipulation min-h-[48px]" href="/#fit">
+                    <span>Not a Fit?</span>
+                    <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </a>
+                <div class="pt-3">
+                    <a class="mobile-nav-link w-full bg-coral text-[#0B1120] text-center font-bold py-3.5 px-6 rounded-full flex items-center justify-center gap-2 hover:bg-orange-400 shadow-[0_0_20px_rgba(255,100,65,0.35)] btn-interactive hover:-translate-y-0.5 active:bg-orange-600 touch-manipulation min-h-[48px] text-sm" href="/#audit">
+                        Run AI Visibility Check &rarr;
+                    </a>
+                </div>
             </div>
         </div>
     </header>
