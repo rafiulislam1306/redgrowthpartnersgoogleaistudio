@@ -166,12 +166,81 @@
     transform: scale(1.2);
     background: #FFA174;
   }
+
+  /* Calculator Presets */
+  .calc-preset-btn {
+    width: 100%;
+    min-height: 36px;
+    padding: 0.375rem 0.25rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #cbd5e1;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    transition: all 0.15s ease-out;
+  }
+  .calc-preset-btn:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  .calc-preset-btn:active {
+    transform: scale(0.96);
+  }
+  .calc-preset-btn.active-coral {
+    background-color: rgba(255, 100, 65, 0.22) !important;
+    border-color: #FF6441 !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 12px -2px rgba(255, 100, 65, 0.45);
+  }
+  .calc-preset-btn.active-blue {
+    background-color: rgba(59, 130, 246, 0.22) !important;
+    border-color: #60a5fa !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 12px -2px rgba(59, 130, 246, 0.45);
+  }
+  .calc-preset-btn.active-emerald {
+    background-color: rgba(16, 185, 129, 0.22) !important;
+    border-color: #34d399 !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 12px -2px rgba(16, 185, 129, 0.45);
+  }
 }
 
 @layer utilities {
   .touch-scroll-momentum {
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-x: contain;
+    touch-action: pan-x pan-y;
+  }
+
+  /* Completely hide native scrollbar slider across all browsers */
+  .no-scrollbar,
+  .scrollbar-none {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+  }
+  .no-scrollbar::-webkit-scrollbar,
+  .scrollbar-none::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  /* Hardware-accelerated sticky column for zero jank during horizontal scroll */
+  .sticky-col {
+    position: sticky;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    touch-action: pan-x pan-y;
   }
 }
 

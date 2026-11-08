@@ -1849,12 +1849,12 @@ AEO Dominance Metric
 </div>
 
 <!-- Interactive AI Search Pipeline & CAC Payback Calculator -->
-<div class="mt-16 bg-[#15213A]/90 backdrop-blur-md rounded-3xl p-6 sm:p-10 border border-white/10 shadow-2xl relative overflow-hidden" id="calculator">
+<div class="mt-16 bg-[#15213A]/90 backdrop-blur-md rounded-3xl p-4 sm:p-8 md:p-10 border border-white/10 shadow-2xl relative overflow-hidden" id="calculator">
   <!-- Subtle ambient glow -->
   <div class="absolute -top-24 -right-24 w-72 h-72 bg-coral/10 blur-3xl pointer-events-none" aria-hidden="true"></div>
   <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-blue-600/10 blur-3xl pointer-events-none" aria-hidden="true"></div>
 
-  <div class="text-center max-w-2xl mx-auto mb-10 relative z-10">
+  <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-10 relative z-10">
     <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 font-bold text-[11px] tracking-widest uppercase mb-4 shadow-sm border border-emerald-500/30">
       <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
       UNIT ECONOMICS &bull; FINANCIAL PROJECTION
@@ -1867,69 +1867,72 @@ AEO Dominance Metric
     </p>
   </div>
 
-  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center relative z-10">
     <!-- Left Column: Inputs & Sliders (7 cols) -->
-    <div class="lg:col-span-7 space-y-6 bg-[#0B1120]/80 p-6 sm:p-8 rounded-2xl border border-white/10">
+    <div class="lg:col-span-7 space-y-5 sm:space-y-6 md:space-y-7 bg-[#0B1120]/80 p-4 sm:p-7 md:p-8 rounded-2xl border border-white/10 shadow-lg">
       <!-- Input 1: ACV -->
       <div>
-        <div class="flex items-center justify-between mb-2">
-          <label for="calcAcv" class="text-sm font-bold text-white flex items-center gap-2">
-            <span>Average Contract Value (ACV)</span>
+        <div class="flex items-center justify-between gap-2 mb-1.5 sm:mb-2">
+          <label for="calcAcv" class="text-xs sm:text-sm font-bold text-white tracking-wide">
+            Average Contract Value (ACV)
           </label>
-          <span id="calcAcvVal" class="text-base sm:text-lg font-mono font-extrabold text-coral tabular-nums">$30,000</span>
+          <span id="calcAcvVal" class="text-base sm:text-lg font-mono font-extrabold text-coral tabular-nums shrink-0">$30,000</span>
         </div>
-        <input type="range" id="calcAcv" min="10000" max="120000" step="5000" value="30000" class="w-full h-2.5 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-coral focus:outline-none focus-visible:ring-2 focus-visible:ring-coral touch-manipulation" aria-label="Average Contract Value slider" />
-        <div class="flex justify-between items-center text-[11px] font-mono text-slate-400 mt-2.5">
-          <span>$10k</span>
-          <div class="flex gap-1.5 flex-wrap justify-center">
-            <button type="button" class="calc-acv-preset min-h-[32px] px-2.5 py-1 rounded-lg bg-white/5 hover:bg-white/15 border border-white/10 text-slate-200 text-xs font-semibold active:scale-95 touch-manipulation transition-all" data-value="15000">$15k</button>
-            <button type="button" class="calc-acv-preset min-h-[32px] px-2.5 py-1 rounded-lg bg-white/5 hover:bg-white/15 border border-white/10 text-slate-200 text-xs font-semibold active:scale-95 touch-manipulation transition-all" data-value="30000">$30k</button>
-            <button type="button" class="calc-acv-preset min-h-[32px] px-2.5 py-1 rounded-lg bg-white/5 hover:bg-white/15 border border-white/10 text-slate-200 text-xs font-semibold active:scale-95 touch-manipulation transition-all" data-value="60000">$60k</button>
-            <button type="button" class="calc-acv-preset min-h-[32px] px-2.5 py-1 rounded-lg bg-white/5 hover:bg-white/15 border border-white/10 text-slate-200 text-xs font-semibold active:scale-95 touch-manipulation transition-all" data-value="100000">$100k</button>
-          </div>
-          <span>$120k</span>
+        <input type="range" id="calcAcv" min="10000" max="120000" step="5000" value="30000" class="w-full h-2.5 bg-slate-700/80 rounded-lg appearance-none cursor-pointer accent-coral focus:outline-none focus-visible:ring-2 focus-visible:ring-coral touch-manipulation my-1" aria-label="Average Contract Value slider" />
+        <div class="flex justify-between items-center text-[10px] sm:text-[11px] font-mono text-slate-400 px-0.5 mt-0.5 mb-2">
+          <span>$10k min</span>
+          <span>$120k max</span>
+        </div>
+        <!-- Dedicated 4-column balanced preset grid: never wraps awkwardly -->
+        <div class="grid grid-cols-4 gap-1.5 sm:gap-2">
+          <button type="button" class="calc-acv-preset calc-preset-btn" data-value="15000">$15k</button>
+          <button type="button" class="calc-acv-preset calc-preset-btn" data-value="30000">$30k</button>
+          <button type="button" class="calc-acv-preset calc-preset-btn" data-value="60000">$60k</button>
+          <button type="button" class="calc-acv-preset calc-preset-btn" data-value="100000">$100k</button>
         </div>
       </div>
 
       <!-- Input 2: Monthly Inbound Demos -->
       <div>
-        <div class="flex items-center justify-between mb-2">
-          <label for="calcDemos" class="text-sm font-bold text-white flex items-center gap-2">
-            <span>Current Monthly Inbound Demos</span>
+        <div class="flex items-center justify-between gap-2 mb-1.5 sm:mb-2">
+          <label for="calcDemos" class="text-xs sm:text-sm font-bold text-white tracking-wide">
+            Current Monthly Inbound Demos
           </label>
-          <span id="calcDemosVal" class="text-base sm:text-lg font-mono font-extrabold text-blue-400 tabular-nums">20 demos/mo</span>
+          <span id="calcDemosVal" class="text-base sm:text-lg font-mono font-extrabold text-blue-400 tabular-nums shrink-0">20 demos/mo</span>
         </div>
-        <input type="range" id="calcDemos" min="5" max="100" step="5" value="20" class="w-full h-2.5 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-blue-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 touch-manipulation" aria-label="Current Monthly Inbound Demos slider" />
-        <div class="flex justify-between items-center text-[11px] font-mono text-slate-400 mt-2.5">
-          <span>5</span>
-          <div class="flex gap-1.5 flex-wrap justify-center">
-            <button type="button" class="calc-demos-preset min-h-[32px] px-2.5 py-1 rounded-lg bg-white/5 hover:bg-white/15 border border-white/10 text-slate-200 text-xs font-semibold active:scale-95 touch-manipulation transition-all" data-value="10">10</button>
-            <button type="button" class="calc-demos-preset min-h-[32px] px-2.5 py-1 rounded-lg bg-white/5 hover:bg-white/15 border border-white/10 text-slate-200 text-xs font-semibold active:scale-95 touch-manipulation transition-all" data-value="20">20</button>
-            <button type="button" class="calc-demos-preset min-h-[32px] px-2.5 py-1 rounded-lg bg-white/5 hover:bg-white/15 border border-white/10 text-slate-200 text-xs font-semibold active:scale-95 touch-manipulation transition-all" data-value="40">40</button>
-            <button type="button" class="calc-demos-preset min-h-[32px] px-2.5 py-1 rounded-lg bg-white/5 hover:bg-white/15 border border-white/10 text-slate-200 text-xs font-semibold active:scale-95 touch-manipulation transition-all" data-value="80">80</button>
-          </div>
-          <span>100</span>
+        <input type="range" id="calcDemos" min="5" max="100" step="5" value="20" class="w-full h-2.5 bg-slate-700/80 rounded-lg appearance-none cursor-pointer accent-blue-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 touch-manipulation my-1" aria-label="Current Monthly Inbound Demos slider" />
+        <div class="flex justify-between items-center text-[10px] sm:text-[11px] font-mono text-slate-400 px-0.5 mt-0.5 mb-2">
+          <span>5 min</span>
+          <span>100 max</span>
+        </div>
+        <!-- Dedicated 4-column balanced preset grid -->
+        <div class="grid grid-cols-4 gap-1.5 sm:gap-2">
+          <button type="button" class="calc-demos-preset calc-preset-btn" data-value="10">10</button>
+          <button type="button" class="calc-demos-preset calc-preset-btn" data-value="20">20</button>
+          <button type="button" class="calc-demos-preset calc-preset-btn" data-value="40">40</button>
+          <button type="button" class="calc-demos-preset calc-preset-btn" data-value="80">80</button>
         </div>
       </div>
 
       <!-- Input 3: Current CAC -->
       <div>
-        <div class="flex items-center justify-between mb-2">
-          <label for="calcCac" class="text-sm font-bold text-white flex items-center gap-2">
-            <span>Current Paid Search / Outbound CAC</span>
+        <div class="flex items-center justify-between gap-2 mb-1.5 sm:mb-2">
+          <label for="calcCac" class="text-xs sm:text-sm font-bold text-white tracking-wide leading-tight">
+            Current Paid Search / Outbound CAC
           </label>
-          <span id="calcCacVal" class="text-base sm:text-lg font-mono font-extrabold text-emerald-400 tabular-nums">$4,000</span>
+          <span id="calcCacVal" class="text-base sm:text-lg font-mono font-extrabold text-emerald-400 tabular-nums shrink-0">$4,000</span>
         </div>
-        <input type="range" id="calcCac" min="1000" max="10000" step="500" value="4000" class="w-full h-2.5 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-emerald-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 touch-manipulation" aria-label="Current CAC slider" />
-        <div class="flex justify-between items-center text-[11px] font-mono text-slate-400 mt-2.5">
-          <span>$1k</span>
-          <div class="flex gap-1.5 flex-wrap justify-center">
-            <button type="button" class="calc-cac-preset min-h-[32px] px-2.5 py-1 rounded-lg bg-white/5 hover:bg-white/15 border border-white/10 text-slate-200 text-xs font-semibold active:scale-95 touch-manipulation transition-all" data-value="2000">$2k</button>
-            <button type="button" class="calc-cac-preset min-h-[32px] px-2.5 py-1 rounded-lg bg-white/5 hover:bg-white/15 border border-white/10 text-slate-200 text-xs font-semibold active:scale-95 touch-manipulation transition-all" data-value="4000">$4k</button>
-            <button type="button" class="calc-cac-preset min-h-[32px] px-2.5 py-1 rounded-lg bg-white/5 hover:bg-white/15 border border-white/10 text-slate-200 text-xs font-semibold active:scale-95 touch-manipulation transition-all" data-value="6000">$6k</button>
-            <button type="button" class="calc-cac-preset min-h-[32px] px-2.5 py-1 rounded-lg bg-white/5 hover:bg-white/15 border border-white/10 text-slate-200 text-xs font-semibold active:scale-95 touch-manipulation transition-all" data-value="8000">$8k</button>
-          </div>
-          <span>$10k</span>
+        <input type="range" id="calcCac" min="1000" max="10000" step="500" value="4000" class="w-full h-2.5 bg-slate-700/80 rounded-lg appearance-none cursor-pointer accent-emerald-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 touch-manipulation my-1" aria-label="Current CAC slider" />
+        <div class="flex justify-between items-center text-[10px] sm:text-[11px] font-mono text-slate-400 px-0.5 mt-0.5 mb-2">
+          <span>$1k min</span>
+          <span>$10k max</span>
+        </div>
+        <!-- Dedicated 4-column balanced preset grid -->
+        <div class="grid grid-cols-4 gap-1.5 sm:gap-2">
+          <button type="button" class="calc-cac-preset calc-preset-btn" data-value="2000">$2k</button>
+          <button type="button" class="calc-cac-preset calc-preset-btn" data-value="4000">$4k</button>
+          <button type="button" class="calc-cac-preset calc-preset-btn" data-value="6000">$6k</button>
+          <button type="button" class="calc-cac-preset calc-preset-btn" data-value="8000">$8k</button>
         </div>
       </div>
     </div>
@@ -1981,8 +1984,8 @@ AEO Dominance Metric
 </div>
 
 <!-- Economic Comparison Matrix (Pillar 4) -->
-<div class="mt-20 pt-16 border-t border-white/10">
-  <div class="text-center mb-12">
+<div class="mt-20 pt-16 border-t border-white/10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="text-center mb-10">
     <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-coral/10 text-coral-light font-bold text-[11px] tracking-widest uppercase mb-4 shadow-sm border border-coral/30">
       THINK ONE MORE TIME &bull; MARKET COMPARISON
     </div>
@@ -1994,79 +1997,593 @@ AEO Dominance Metric
     </p>
   </div>
 
-  <!-- Mobile Swipe Indicator -->
-  <div class="md:hidden flex items-center justify-center gap-1.5 text-xs text-slate-400 mb-3">
-    <span>Scroll horizontally to view comparison</span>
-    <svg class="w-4 h-4 text-coral shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+  <!-- Mobile Interactive Head-to-Head Compare Mode (< md) -->
+  <div class="md:hidden space-y-4 mb-6">
+    <!-- Competitor Selector Segment -->
+    <div class="space-y-2">
+      <div class="text-[11px] font-mono uppercase text-slate-400 font-bold tracking-wider text-center">Compare RedGrowth Against:</div>
+      <div class="grid grid-cols-3 p-1 rounded-xl bg-white/5 border border-white/10 gap-1" role="tablist" aria-label="Alternative Comparison Switcher">
+        <button type="button" onclick="switchCompareTab('agency')" id="tab-btn-agency" class="compare-pill py-2.5 px-1 text-center text-xs font-bold rounded-lg transition-all bg-coral text-[#0B1120] shadow-sm touch-manipulation" role="tab" aria-selected="true">
+          Traditional SEO
+        </button>
+        <button type="button" onclick="switchCompareTab('offshore')" id="tab-btn-offshore" class="compare-pill py-2.5 px-1 text-center text-xs font-medium text-slate-300 rounded-lg transition-all hover:text-white hover:bg-white/5 touch-manipulation" role="tab" aria-selected="false">
+          Offshore Bots
+        </button>
+        <button type="button" onclick="switchCompareTab('inhouse')" id="tab-btn-inhouse" class="compare-pill py-2.5 px-1 text-center text-xs font-medium text-slate-300 rounded-lg transition-all hover:text-white hover:bg-white/5 touch-manipulation" role="tab" aria-selected="false">
+          In-House
+        </button>
+      </div>
+    </div>
+
+    <!-- Panel 1: Traditional SEO Agency -->
+    <div id="compare-panel-agency" class="compare-panel space-y-2.5">
+      <!-- 1. Primary Focus -->
+      <div class="p-3.5 rounded-xl bg-gradient-to-br from-[#0c1322] to-[#070B14] border border-white/10 shadow-sm">
+        <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Primary Focus</div>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <div class="p-2.5 rounded-lg bg-white/[0.03] border border-white/5">
+            <div class="text-[9px] uppercase font-mono text-slate-500 mb-1">Traditional Agency</div>
+            <div class="text-slate-300 font-medium leading-snug">Unread 2,000-word blog posts</div>
+          </div>
+          <div class="p-2.5 rounded-lg bg-coral/10 border border-coral/30">
+            <div class="text-[9px] uppercase font-mono text-coral font-bold mb-1 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-coral"></span>RedGrowth
+            </div>
+            <div class="text-white font-bold leading-snug">Algorithmic AI Consensus</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. AI Engine Visibility -->
+      <div class="p-3.5 rounded-xl bg-gradient-to-br from-[#0c1322] to-[#070B14] border border-white/10 shadow-sm">
+        <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">AI Engine Visibility</div>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <div class="p-2.5 rounded-lg bg-white/[0.03] border border-white/5">
+            <div class="text-[9px] uppercase font-mono text-slate-500 mb-1">Traditional Agency</div>
+            <div class="text-slate-400 font-medium leading-snug">Near 0% (LLMs skip generic blogs)</div>
+          </div>
+          <div class="p-2.5 rounded-lg bg-coral/10 border border-coral/30">
+            <div class="text-[9px] uppercase font-mono text-coral font-bold mb-1 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>RedGrowth
+            </div>
+            <div class="text-emerald-400 font-bold leading-snug">#1 Cited Brand in AEO</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. FTC Legal Compliance -->
+      <div class="p-3.5 rounded-xl bg-gradient-to-br from-[#0c1322] to-[#070B14] border border-white/10 shadow-sm">
+        <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">FTC Legal Compliance</div>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <div class="p-2.5 rounded-lg bg-white/[0.03] border border-white/5">
+            <div class="text-[9px] uppercase font-mono text-slate-500 mb-1">Traditional Agency</div>
+            <div class="text-slate-400 font-medium leading-snug">Irrelevant (No community work)</div>
+          </div>
+          <div class="p-2.5 rounded-lg bg-coral/10 border border-coral/30">
+            <div class="text-[9px] uppercase font-mono text-coral font-bold mb-1 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>RedGrowth
+            </div>
+            <div class="text-emerald-400 font-bold leading-snug">100% Insured FTC Compliant</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Asset Karma Pool -->
+      <div class="p-3.5 rounded-xl bg-gradient-to-br from-[#0c1322] to-[#070B14] border border-white/10 shadow-sm">
+        <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Asset Karma Pool</div>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <div class="p-2.5 rounded-lg bg-white/[0.03] border border-white/5">
+            <div class="text-[9px] uppercase font-mono text-slate-500 mb-1">Traditional Agency</div>
+            <div class="text-slate-400 font-medium leading-snug">None</div>
+          </div>
+          <div class="p-2.5 rounded-lg bg-coral/10 border border-coral/30">
+            <div class="text-[9px] uppercase font-mono text-coral font-bold mb-1 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-coral"></span>RedGrowth
+            </div>
+            <div class="text-white font-bold leading-snug">500+ Aged Persona Pool</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Contract Term -->
+      <div class="p-3.5 rounded-xl bg-gradient-to-br from-[#0c1322] to-[#070B14] border border-white/10 shadow-sm">
+        <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Contract Term</div>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <div class="p-2.5 rounded-lg bg-white/[0.03] border border-white/5">
+            <div class="text-[9px] uppercase font-mono text-slate-500 mb-1">Traditional Agency</div>
+            <div class="text-slate-400 font-medium leading-snug">12-Month Rigid Lock-In</div>
+          </div>
+          <div class="p-2.5 rounded-lg bg-coral/10 border border-coral/30">
+            <div class="text-[9px] uppercase font-mono text-coral font-bold mb-1 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-coral"></span>RedGrowth
+            </div>
+            <div class="text-white font-bold leading-snug">30-Day Proof &bull; Rolling Mo/Mo</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Time to Results -->
+      <div class="p-3.5 rounded-xl bg-gradient-to-br from-[#0c1322] to-[#070B14] border border-white/10 shadow-sm">
+        <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Time to Results</div>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <div class="p-2.5 rounded-lg bg-white/[0.03] border border-white/5">
+            <div class="text-[9px] uppercase font-mono text-slate-500 mb-1">Traditional Agency</div>
+            <div class="text-slate-400 font-medium leading-snug">6–12 Months</div>
+          </div>
+          <div class="p-2.5 rounded-lg bg-coral/10 border border-coral/30">
+            <div class="text-[9px] uppercase font-mono text-coral font-bold mb-1 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>RedGrowth
+            </div>
+            <div class="text-emerald-400 font-bold leading-snug">30–45 Days</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. True Monthly Cost -->
+      <div class="p-3.5 rounded-xl bg-gradient-to-br from-[#0c1322] to-[#070B14] border border-white/10 shadow-sm">
+        <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">True Monthly Cost</div>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <div class="p-2.5 rounded-lg bg-white/[0.03] border border-white/5">
+            <div class="text-[9px] uppercase font-mono text-slate-500 mb-1">Traditional Agency</div>
+            <div class="text-slate-300 font-semibold leading-snug">$10,000 – $18,000</div>
+          </div>
+          <div class="p-2.5 rounded-lg bg-coral/15 border border-coral/40">
+            <div class="text-[9px] uppercase font-mono text-coral font-bold mb-1 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-coral"></span>RedGrowth
+            </div>
+            <div class="text-coral-light font-extrabold leading-snug">$4,500 Transparent</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel 2: Offshore Reddit Spammers -->
+    <div id="compare-panel-offshore" class="compare-panel space-y-2.5 hidden">
+      <!-- 1. Primary Focus -->
+      <div class="p-3.5 rounded-xl bg-gradient-to-br from-[#0c1322] to-[#070B14] border border-white/10 shadow-sm">
+        <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Primary Focus</div>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <div class="p-2.5 rounded-lg bg-red-950/20 border border-red-500/20">
+            <div class="text-[9px] uppercase font-mono text-red-400 mb-1">Offshore Bots</div>
+            <div class="text-red-300 font-medium leading-snug">Low-effort bot upvote blasts</div>
+          </div>
+          <div class="p-2.5 rounded-lg bg-coral/10 border border-coral/30">
+            <div class="text-[9px] uppercase font-mono text-coral font-bold mb-1 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-coral"></span>RedGrowth
+            </div>
+            <div class="text-white font-bold leading-snug">Algorithmic AI Consensus</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. AI Engine Visibility -->
+      <div class="p-3.5 rounded-xl bg-gradient-to-br from-[#0c1322] to-[#070B14] border border-white/10 shadow-sm">
+        <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">AI Engine Visibility</div>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <div class="p-2.5 rounded-lg bg-red-950/20 border border-red-500/20">
+            <div class="text-[9px] uppercase font-mono text-red-400 mb-1">Offshore Bots</div>
+            <div class="text-red-300 font-medium leading-snug">Negative (Reddit shadowbans bots)</div>
+          </div>
+          <div class="p-2.5 rounded-lg bg-coral/10 border border-coral/30">
+            <div class="text-[9px] uppercase font-mono text-coral font-bold mb-1 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>RedGrowth
+            </div>
+            <div class="text-emerald-400 font-bold leading-snug">#1 Cited Brand in AEO</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. FTC Legal Compliance -->
+      <div class="p-3.5 rounded-xl bg-gradient-to-br from-[#0c1322] to-[#070B14] border border-white/10 shadow-sm">
+        <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">FTC Legal Compliance</div>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <div class="p-2.5 rounded-lg bg-red-950/20 border border-red-500/20">
+            <div class="text-[9px] uppercase font-mono text-red-400 mb-1">Offshore Bots</div>
+            <div class="text-red-300 font-medium leading-snug">Extreme Risk ($53k FTC fines)</div>
+          </div>
+          <div class="p-2.5 rounded-lg bg-coral/10 border border-coral/30">
+            <div class="text-[9px] uppercase font-mono text-coral font-bold mb-1 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>RedGrowth
+            </div>
+            <div class="text-emerald-400 font-bold leading-snug">100% Insured FTC Compliant</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Asset Karma Pool -->
+      <div class="p-3.5 rounded-xl bg-gradient-to-br from-[#0c1322] to-[#070B14] border border-white/10 shadow-sm">
+        <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Asset Karma Pool</div>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <div class="p-2.5 rounded-lg bg-red-950/20 border border-red-500/20">
+            <div class="text-[9px] uppercase font-mono text-red-400 mb-1">Offshore Bots</div>
+            <div class="text-red-300 font-medium leading-snug">0 (Fresh throw-away accounts)</div>
+          </div>
+          <div class="p-2.5 rounded-lg bg-coral/10 border border-coral/30">
+            <div class="text-[9px] uppercase font-mono text-coral font-bold mb-1 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-coral"></span>RedGrowth
+            </div>
+            <div class="text-white font-bold leading-snug">500+ Aged Persona Pool</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Contract Term -->
+      <div class="p-3.5 rounded-xl bg-gradient-to-br from-[#0c1322] to-[#070B14] border border-white/10 shadow-sm">
+        <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Contract Term</div>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <div class="p-2.5 rounded-lg bg-white/[0.03] border border-white/5">
+            <div class="text-[9px] uppercase font-mono text-slate-500 mb-1">Offshore Bots</div>
+            <div class="text-slate-400 font-medium leading-snug">Pay-per-post (No guarantee)</div>
+          </div>
+          <div class="p-2.5 rounded-lg bg-coral/10 border border-coral/30">
+            <div class="text-[9px] uppercase font-mono text-coral font-bold mb-1 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-coral"></span>RedGrowth
+            </div>
+            <div class="text-white font-bold leading-snug">30-Day Proof &bull; Rolling Mo/Mo</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Time to Results -->
+      <div class="p-3.5 rounded-xl bg-gradient-to-br from-[#0c1322] to-[#070B14] border border-white/10 shadow-sm">
+        <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Time to Results</div>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <div class="p-2.5 rounded-lg bg-red-950/20 border border-red-500/20">
+            <div class="text-[9px] uppercase font-mono text-red-400 mb-1">Offshore Bots</div>
+            <div class="text-red-300 font-medium leading-snug">Instant Ban</div>
+          </div>
+          <div class="p-2.5 rounded-lg bg-coral/10 border border-coral/30">
+            <div class="text-[9px] uppercase font-mono text-coral font-bold mb-1 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>RedGrowth
+            </div>
+            <div class="text-emerald-400 font-bold leading-snug">30–45 Days</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. True Monthly Cost -->
+      <div class="p-3.5 rounded-xl bg-gradient-to-br from-[#0c1322] to-[#070B14] border border-white/10 shadow-sm">
+        <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">True Monthly Cost</div>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <div class="p-2.5 rounded-lg bg-red-950/20 border border-red-500/20">
+            <div class="text-[9px] uppercase font-mono text-red-400 mb-1">Offshore Bots</div>
+            <div class="text-red-300 font-semibold leading-snug">$1,500 (Wasted)</div>
+          </div>
+          <div class="p-2.5 rounded-lg bg-coral/15 border border-coral/40">
+            <div class="text-[9px] uppercase font-mono text-coral font-bold mb-1 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-coral"></span>RedGrowth
+            </div>
+            <div class="text-coral-light font-extrabold leading-snug">$4,500 Transparent</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel 3: In-House Headcount -->
+    <div id="compare-panel-inhouse" class="compare-panel space-y-2.5 hidden">
+      <!-- 1. Primary Focus -->
+      <div class="p-3.5 rounded-xl bg-gradient-to-br from-[#0c1322] to-[#070B14] border border-white/10 shadow-sm">
+        <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Primary Focus</div>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <div class="p-2.5 rounded-lg bg-white/[0.03] border border-white/5">
+            <div class="text-[9px] uppercase font-mono text-slate-500 mb-1">In-House</div>
+            <div class="text-slate-300 font-medium leading-snug">Divided across all channels</div>
+          </div>
+          <div class="p-2.5 rounded-lg bg-coral/10 border border-coral/30">
+            <div class="text-[9px] uppercase font-mono text-coral font-bold mb-1 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-coral"></span>RedGrowth
+            </div>
+            <div class="text-white font-bold leading-snug">Algorithmic AI Consensus</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. AI Engine Visibility -->
+      <div class="p-3.5 rounded-xl bg-gradient-to-br from-[#0c1322] to-[#070B14] border border-white/10 shadow-sm">
+        <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">AI Engine Visibility</div>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <div class="p-2.5 rounded-lg bg-white/[0.03] border border-white/5">
+            <div class="text-[9px] uppercase font-mono text-slate-500 mb-1">In-House</div>
+            <div class="text-slate-400 font-medium leading-snug">Slow (Lacks specialized IP)</div>
+          </div>
+          <div class="p-2.5 rounded-lg bg-coral/10 border border-coral/30">
+            <div class="text-[9px] uppercase font-mono text-coral font-bold mb-1 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>RedGrowth
+            </div>
+            <div class="text-emerald-400 font-bold leading-snug">#1 Cited Brand in AEO</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. FTC Legal Compliance -->
+      <div class="p-3.5 rounded-xl bg-gradient-to-br from-[#0c1322] to-[#070B14] border border-white/10 shadow-sm">
+        <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">FTC Legal Compliance</div>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <div class="p-2.5 rounded-lg bg-white/[0.03] border border-white/5">
+            <div class="text-[9px] uppercase font-mono text-slate-500 mb-1">In-House</div>
+            <div class="text-slate-400 font-medium leading-snug">Moderate</div>
+          </div>
+          <div class="p-2.5 rounded-lg bg-coral/10 border border-coral/30">
+            <div class="text-[9px] uppercase font-mono text-coral font-bold mb-1 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>RedGrowth
+            </div>
+            <div class="text-emerald-400 font-bold leading-snug">100% Insured FTC Compliant</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Asset Karma Pool -->
+      <div class="p-3.5 rounded-xl bg-gradient-to-br from-[#0c1322] to-[#070B14] border border-white/10 shadow-sm">
+        <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Asset Karma Pool</div>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <div class="p-2.5 rounded-lg bg-white/[0.03] border border-white/5">
+            <div class="text-[9px] uppercase font-mono text-slate-500 mb-1">In-House</div>
+            <div class="text-slate-400 font-medium leading-snug">1–2 accounts (Easily burnt)</div>
+          </div>
+          <div class="p-2.5 rounded-lg bg-coral/10 border border-coral/30">
+            <div class="text-[9px] uppercase font-mono text-coral font-bold mb-1 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-coral"></span>RedGrowth
+            </div>
+            <div class="text-white font-bold leading-snug">500+ Aged Persona Pool</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Contract Term -->
+      <div class="p-3.5 rounded-xl bg-gradient-to-br from-[#0c1322] to-[#070B14] border border-white/10 shadow-sm">
+        <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Contract Term</div>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <div class="p-2.5 rounded-lg bg-white/[0.03] border border-white/5">
+            <div class="text-[9px] uppercase font-mono text-slate-500 mb-1">In-House</div>
+            <div class="text-slate-400 font-medium leading-snug">Full-time W2 + severance</div>
+          </div>
+          <div class="p-2.5 rounded-lg bg-coral/10 border border-coral/30">
+            <div class="text-[9px] uppercase font-mono text-coral font-bold mb-1 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-coral"></span>RedGrowth
+            </div>
+            <div class="text-white font-bold leading-snug">30-Day Proof &bull; Rolling Mo/Mo</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Time to Results -->
+      <div class="p-3.5 rounded-xl bg-gradient-to-br from-[#0c1322] to-[#070B14] border border-white/10 shadow-sm">
+        <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Time to Results</div>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <div class="p-2.5 rounded-lg bg-white/[0.03] border border-white/5">
+            <div class="text-[9px] uppercase font-mono text-slate-500 mb-1">In-House</div>
+            <div class="text-slate-400 font-medium leading-snug">4–6 Months</div>
+          </div>
+          <div class="p-2.5 rounded-lg bg-coral/10 border border-coral/30">
+            <div class="text-[9px] uppercase font-mono text-coral font-bold mb-1 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>RedGrowth
+            </div>
+            <div class="text-emerald-400 font-bold leading-snug">30–45 Days</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. True Monthly Cost -->
+      <div class="p-3.5 rounded-xl bg-gradient-to-br from-[#0c1322] to-[#070B14] border border-white/10 shadow-sm">
+        <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">True Monthly Cost</div>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <div class="p-2.5 rounded-lg bg-white/[0.03] border border-white/5">
+            <div class="text-[9px] uppercase font-mono text-slate-500 mb-1">In-House</div>
+            <div class="text-slate-300 font-semibold leading-snug">$15,000+ salary + stack</div>
+          </div>
+          <div class="p-2.5 rounded-lg bg-coral/15 border border-coral/40">
+            <div class="text-[9px] uppercase font-mono text-coral font-bold mb-1 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-coral"></span>RedGrowth
+            </div>
+            <div class="text-coral-light font-extrabold leading-snug">$4,500 Transparent</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toggle to view full raw table on mobile -->
+    <button type="button" id="btnToggleMobileTable" onclick="toggleMobileFullTable()" class="w-full py-2.5 px-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-semibold text-slate-300 hover:text-white transition-all flex items-center justify-center gap-2 touch-manipulation">
+      <svg class="w-4 h-4 text-coral shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+      <span id="btnToggleMobileTableLabel">Show Full 5-Column Matrix Table</span>
+    </button>
   </div>
 
-  <!-- Comparison Table Container with Momentum Scrolling -->
-  <div class="overflow-x-auto touch-scroll-momentum rounded-2xl border border-white/10 shadow-2xl bg-[#0B1120]">
-    <table class="w-full text-left border-collapse min-w-[760px]">
-      <thead>
-        <tr class="border-b border-white/10 text-xs uppercase tracking-wider text-slate-400 bg-white/5 font-mono">
-          <th class="py-4 px-5 sticky left-0 z-20 bg-[#0B1120] border-r border-white/10 shadow-[2px_0_10px_rgba(0,0,0,0.5)]">Evaluation Dimension</th>
-          <th class="py-4 px-5">Traditional SEO Agency</th>
-          <th class="py-4 px-5">Offshore Reddit Spammers</th>
-          <th class="py-4 px-5">In-House Headcount</th>
-          <th class="py-4 px-5 bg-coral/15 text-coral-light font-bold border-l border-r border-coral/30">RedGrowth.partners</th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-white/5 text-sm text-slate-300 font-medium">
-        <tr class="hover:bg-white/[0.02] transition-colors">
-          <td class="py-4 px-5 font-bold text-white sticky left-0 z-10 bg-[#0B1120] border-r border-white/10 shadow-[2px_0_8px_rgba(0,0,0,0.4)]">Primary Focus</td>
-          <td class="py-4 px-5 text-slate-400">Unread 2,000-word blog posts</td>
-          <td class="py-4 px-5 text-red-400">Low-effort bot upvote blasts</td>
-          <td class="py-4 px-5 text-slate-400">Divided across all channels</td>
-          <td class="py-4 px-5 font-bold text-white bg-coral/10 border-l border-r border-coral/20">Algorithmic AI Consensus</td>
-        </tr>
-        <tr class="hover:bg-white/[0.02] transition-colors">
-          <td class="py-4 px-5 font-bold text-white sticky left-0 z-10 bg-[#0B1120] border-r border-white/10 shadow-[2px_0_8px_rgba(0,0,0,0.4)]">AI Engine Visibility</td>
-          <td class="py-4 px-5 text-slate-400">Near 0% (LLMs skip generic blogs)</td>
-          <td class="py-4 px-5 text-red-400">Negative (Reddit shadowbans bots)</td>
-          <td class="py-4 px-5 text-slate-400">Slow (Lacks specialized IP)</td>
-          <td class="py-4 px-5 font-bold text-emerald-400 bg-coral/10 border-l border-r border-coral/20">#1 Cited Brand in AEO</td>
-        </tr>
-        <tr class="hover:bg-white/[0.02] transition-colors">
-          <td class="py-4 px-5 font-bold text-white sticky left-0 z-10 bg-[#0B1120] border-r border-white/10 shadow-[2px_0_8px_rgba(0,0,0,0.4)]">FTC Legal Compliance</td>
-          <td class="py-4 px-5 text-slate-400">Irrelevant (No community work)</td>
-          <td class="py-4 px-5 text-red-400">Extreme Risk ($53k FTC fines)</td>
-          <td class="py-4 px-5 text-slate-400">Moderate</td>
-          <td class="py-4 px-5 font-bold text-emerald-400 bg-coral/10 border-l border-r border-coral/20">100% Insured FTC Compliant</td>
-        </tr>
-        <tr class="hover:bg-white/[0.02] transition-colors">
-          <td class="py-4 px-5 font-bold text-white sticky left-0 z-10 bg-[#0B1120] border-r border-white/10 shadow-[2px_0_8px_rgba(0,0,0,0.4)]">Asset Karma Pool</td>
-          <td class="py-4 px-5 text-slate-400">None</td>
-          <td class="py-4 px-5 text-red-400">0 (Fresh throw-away accounts)</td>
-          <td class="py-4 px-5 text-slate-400">1–2 accounts (Easily burnt)</td>
-          <td class="py-4 px-5 font-bold text-white bg-coral/10 border-l border-r border-coral/20">500+ Aged Persona Pool</td>
-        </tr>
-        <tr class="hover:bg-white/[0.02] transition-colors">
-          <td class="py-4 px-5 font-bold text-white sticky left-0 z-10 bg-[#0B1120] border-r border-white/10 shadow-[2px_0_8px_rgba(0,0,0,0.4)]">Contract Term</td>
-          <td class="py-4 px-5 text-slate-400">12-Month Rigid Lock-In</td>
-          <td class="py-4 px-5 text-slate-400">Pay-per-post (No guarantee)</td>
-          <td class="py-4 px-5 text-slate-400">Full-time W2 + severance</td>
-          <td class="py-4 px-5 font-bold text-white bg-coral/10 border-l border-r border-coral/20">30-Day Proof &bull; Rolling Mo/Mo</td>
-        </tr>
-        <tr class="hover:bg-white/[0.02] transition-colors">
-          <td class="py-4 px-5 font-bold text-white sticky left-0 z-10 bg-[#0B1120] border-r border-white/10 shadow-[2px_0_8px_rgba(0,0,0,0.4)]">Time to Results</td>
-          <td class="py-4 px-5 text-slate-400">6–12 Months</td>
-          <td class="py-4 px-5 text-red-400">Instant Ban</td>
-          <td class="py-4 px-5 text-slate-400">4–6 Months</td>
-          <td class="py-4 px-5 font-bold text-emerald-400 bg-coral/10 border-l border-r border-coral/20">30–45 Days</td>
-        </tr>
-        <tr class="hover:bg-white/[0.02] transition-colors bg-white/[0.03]">
-          <td class="py-4 px-5 font-bold text-white sticky left-0 z-10 bg-[#0B1120] border-r border-white/10 shadow-[2px_0_8px_rgba(0,0,0,0.4)]">True Monthly Cost</td>
-          <td class="py-4 px-5 text-slate-400">$10,000 – $18,000</td>
-          <td class="py-4 px-5 text-slate-400">$1,500 (Wasted)</td>
-          <td class="py-4 px-5 text-slate-400">$15,000+ salary + tool stack</td>
-          <td class="py-4 px-5 font-extrabold text-coral-light bg-coral/15 border-l border-r border-b border-coral/30">$4,500 Transparent</td>
-        </tr>
-      </tbody>
-    </table>
+  <!-- Full Comparison Table Container (Always visible on md+, toggled on mobile) -->
+  <div id="fullComparisonTableOuter" class="hidden md:block rounded-2xl border border-white/10 shadow-2xl bg-[#0B1120] overflow-hidden">
+    <!-- Stationary Mobile Swipe Indicator (Stays fixed at the top, NEVER slides horizontally) -->
+    <div class="md:hidden flex items-center justify-center gap-1.5 text-xs text-slate-400 py-2.5 px-4 bg-white/5 border-b border-white/10 select-none">
+      <span>Swipe sideways to view all 5 columns</span>
+      <svg class="w-4 h-4 text-coral shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+    </div>
+
+    <!-- Scrollable Table Wrap (Only the table rows and comparative columns slide) -->
+    <div id="fullComparisonTableWrap" class="overflow-x-auto touch-scroll-momentum no-scrollbar select-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden" style="-webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none;">
+      <table id="fullComparisonTable" class="w-full text-left border-collapse min-w-[760px] touch-pan-x cursor-grab active:cursor-grabbing">
+        <thead>
+          <tr class="border-b border-white/10 text-xs uppercase tracking-wider text-slate-400 bg-white/5 font-mono">
+            <th class="py-4 px-4 sm:px-5 sticky-col z-20 bg-[#0B1120] border-r border-white/10 shadow-[2px_0_10px_rgba(0,0,0,0.5)] min-w-[135px] max-w-[155px] sm:min-w-[190px] sm:max-w-none">Evaluation Dimension</th>
+            <th class="py-4 px-4 sm:px-5 min-w-[155px]">Traditional SEO Agency</th>
+            <th class="py-4 px-4 sm:px-5 min-w-[155px]">Offshore Reddit Spammers</th>
+            <th class="py-4 px-4 sm:px-5 min-w-[155px]">In-House Headcount</th>
+            <th class="py-4 px-4 sm:px-5 min-w-[175px] bg-coral/15 text-coral-light font-bold border-l border-r border-coral/30">RedGrowth.partners</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-white/5 text-sm text-slate-300 font-medium">
+          <tr class="hover:bg-white/[0.02] transition-colors">
+            <td class="py-4 px-4 sm:px-5 font-bold text-white sticky-col z-10 bg-[#0B1120] border-r border-white/10 shadow-[2px_0_8px_rgba(0,0,0,0.4)] min-w-[135px] max-w-[155px] sm:min-w-[190px] sm:max-w-none text-xs sm:text-sm">Primary Focus</td>
+            <td class="py-4 px-4 sm:px-5 text-slate-400 text-xs sm:text-sm">Unread 2,000-word blog posts</td>
+            <td class="py-4 px-4 sm:px-5 text-red-400 text-xs sm:text-sm">Low-effort bot upvote blasts</td>
+            <td class="py-4 px-4 sm:px-5 text-slate-400 text-xs sm:text-sm">Divided across all channels</td>
+            <td class="py-4 px-4 sm:px-5 font-bold text-white bg-coral/10 border-l border-r border-coral/20 text-xs sm:text-sm">Algorithmic AI Consensus</td>
+          </tr>
+          <tr class="hover:bg-white/[0.02] transition-colors">
+            <td class="py-4 px-4 sm:px-5 font-bold text-white sticky-col z-10 bg-[#0B1120] border-r border-white/10 shadow-[2px_0_8px_rgba(0,0,0,0.4)] min-w-[135px] max-w-[155px] sm:min-w-[190px] sm:max-w-none text-xs sm:text-sm">AI Engine Visibility</td>
+            <td class="py-4 px-4 sm:px-5 text-slate-400 text-xs sm:text-sm">Near 0% (LLMs skip generic blogs)</td>
+            <td class="py-4 px-4 sm:px-5 text-red-400 text-xs sm:text-sm">Negative (Reddit shadowbans bots)</td>
+            <td class="py-4 px-4 sm:px-5 text-slate-400 text-xs sm:text-sm">Slow (Lacks specialized IP)</td>
+            <td class="py-4 px-4 sm:px-5 font-bold text-emerald-400 bg-coral/10 border-l border-r border-coral/20 text-xs sm:text-sm">#1 Cited Brand in AEO</td>
+          </tr>
+          <tr class="hover:bg-white/[0.02] transition-colors">
+            <td class="py-4 px-4 sm:px-5 font-bold text-white sticky-col z-10 bg-[#0B1120] border-r border-white/10 shadow-[2px_0_8px_rgba(0,0,0,0.4)] min-w-[135px] max-w-[155px] sm:min-w-[190px] sm:max-w-none text-xs sm:text-sm">FTC Legal Compliance</td>
+            <td class="py-4 px-4 sm:px-5 text-slate-400 text-xs sm:text-sm">Irrelevant (No community work)</td>
+            <td class="py-4 px-4 sm:px-5 text-red-400 text-xs sm:text-sm">Extreme Risk ($53k FTC fines)</td>
+            <td class="py-4 px-4 sm:px-5 text-slate-400 text-xs sm:text-sm">Moderate</td>
+            <td class="py-4 px-4 sm:px-5 font-bold text-emerald-400 bg-coral/10 border-l border-r border-coral/20 text-xs sm:text-sm">100% Insured FTC Compliant</td>
+          </tr>
+          <tr class="hover:bg-white/[0.02] transition-colors">
+            <td class="py-4 px-4 sm:px-5 font-bold text-white sticky-col z-10 bg-[#0B1120] border-r border-white/10 shadow-[2px_0_8px_rgba(0,0,0,0.4)] min-w-[135px] max-w-[155px] sm:min-w-[190px] sm:max-w-none text-xs sm:text-sm">Asset Karma Pool</td>
+            <td class="py-4 px-4 sm:px-5 text-slate-400 text-xs sm:text-sm">None</td>
+            <td class="py-4 px-4 sm:px-5 text-red-400 text-xs sm:text-sm">0 (Fresh throw-away accounts)</td>
+            <td class="py-4 px-4 sm:px-5 text-slate-400 text-xs sm:text-sm">1–2 accounts (Easily burnt)</td>
+            <td class="py-4 px-4 sm:px-5 font-bold text-white bg-coral/10 border-l border-r border-coral/20 text-xs sm:text-sm">500+ Aged Persona Pool</td>
+          </tr>
+          <tr class="hover:bg-white/[0.02] transition-colors">
+            <td class="py-4 px-4 sm:px-5 font-bold text-white sticky-col z-10 bg-[#0B1120] border-r border-white/10 shadow-[2px_0_8px_rgba(0,0,0,0.4)] min-w-[135px] max-w-[155px] sm:min-w-[190px] sm:max-w-none text-xs sm:text-sm">Contract Term</td>
+            <td class="py-4 px-4 sm:px-5 text-slate-400 text-xs sm:text-sm">12-Month Rigid Lock-In</td>
+            <td class="py-4 px-4 sm:px-5 text-slate-400 text-xs sm:text-sm">Pay-per-post (No guarantee)</td>
+            <td class="py-4 px-4 sm:px-5 text-slate-400 text-xs sm:text-sm">Full-time W2 + severance</td>
+            <td class="py-4 px-4 sm:px-5 font-bold text-white bg-coral/10 border-l border-r border-coral/20 text-xs sm:text-sm">30-Day Proof &bull; Rolling Mo/Mo</td>
+          </tr>
+          <tr class="hover:bg-white/[0.02] transition-colors">
+            <td class="py-4 px-4 sm:px-5 font-bold text-white sticky-col z-10 bg-[#0B1120] border-r border-white/10 shadow-[2px_0_8px_rgba(0,0,0,0.4)] min-w-[135px] max-w-[155px] sm:min-w-[190px] sm:max-w-none text-xs sm:text-sm">Time to Results</td>
+            <td class="py-4 px-4 sm:px-5 text-slate-400 text-xs sm:text-sm">6–12 Months</td>
+            <td class="py-4 px-4 sm:px-5 text-red-400 text-xs sm:text-sm">Instant Ban</td>
+            <td class="py-4 px-4 sm:px-5 text-slate-400 text-xs sm:text-sm">4–6 Months</td>
+            <td class="py-4 px-4 sm:px-5 font-bold text-emerald-400 bg-coral/10 border-l border-r border-coral/20 text-xs sm:text-sm">30–45 Days</td>
+          </tr>
+          <tr class="hover:bg-white/[0.02] transition-colors bg-white/[0.03]">
+            <td class="py-4 px-4 sm:px-5 font-bold text-white sticky-col z-10 bg-[#0B1120] border-r border-white/10 shadow-[2px_0_8px_rgba(0,0,0,0.4)] min-w-[135px] max-w-[155px] sm:min-w-[190px] sm:max-w-none text-xs sm:text-sm">True Monthly Cost</td>
+            <td class="py-4 px-4 sm:px-5 text-slate-400 text-xs sm:text-sm">$10,000 – $18,000</td>
+            <td class="py-4 px-4 sm:px-5 text-slate-400 text-xs sm:text-sm">$1,500 (Wasted)</td>
+            <td class="py-4 px-4 sm:px-5 text-slate-400 text-xs sm:text-sm">$15,000+ salary + tool stack</td>
+            <td class="py-4 px-4 sm:px-5 font-extrabold text-coral-light bg-coral/15 border-l border-r border-b border-coral/30 text-xs sm:text-sm">$4,500 Transparent</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
-</div>
+<script>
+function switchCompareTab(key) {
+  const tabs = ['agency', 'offshore', 'inhouse'];
+  tabs.forEach(function(t) {
+    const btn = document.getElementById('tab-btn-' + t);
+    const panel = document.getElementById('compare-panel-' + t);
+    if (t === key) {
+      if (btn) {
+        btn.classList.add('bg-coral', 'text-[#0B1120]', 'font-bold', 'shadow-sm');
+        btn.classList.remove('text-slate-300', 'font-medium');
+        btn.setAttribute('aria-selected', 'true');
+      }
+      if (panel) panel.classList.remove('hidden');
+    } else {
+      if (btn) {
+        btn.classList.remove('bg-coral', 'text-[#0B1120]', 'font-bold', 'shadow-sm');
+        btn.classList.add('text-slate-300', 'font-medium');
+        btn.setAttribute('aria-selected', 'false');
+      }
+      if (panel) panel.classList.add('hidden');
+    }
+  });
+}
+
+function toggleMobileFullTable() {
+  const outer = document.getElementById('fullComparisonTableOuter');
+  const label = document.getElementById('btnToggleMobileTableLabel');
+  if (!outer) return;
+  const isHidden = outer.classList.contains('hidden');
+  if (isHidden) {
+    outer.classList.remove('hidden');
+    if (label) label.textContent = 'Hide 5-Column Matrix Table';
+    initTableDragAndSwipe();
+  } else {
+    outer.classList.add('hidden');
+    if (label) label.textContent = 'Show Full 5-Column Matrix Table';
+  }
+}
+
+let isTableDragInitialized = false;
+function initTableDragAndSwipe() {
+  const wrap = document.getElementById('fullComparisonTableWrap');
+  if (!wrap || isTableDragInitialized) return;
+  isTableDragInitialized = true;
+
+  // Desktop Mouse Drag Scrolling (Zero interference with touch)
+  let isMouseDown = false;
+  let mouseStartX = 0;
+  let mouseStartScroll = 0;
+
+  wrap.addEventListener('mousedown', (e) => {
+    if (e.button !== 0) return;
+    isMouseDown = true;
+    mouseStartX = e.clientX;
+    mouseStartScroll = wrap.scrollLeft;
+    wrap.classList.add('cursor-grabbing');
+    wrap.style.scrollBehavior = 'auto';
+  });
+
+  window.addEventListener('mousemove', (e) => {
+    if (!isMouseDown) return;
+    e.preventDefault();
+    const deltaX = e.clientX - mouseStartX;
+    wrap.scrollLeft = mouseStartScroll - deltaX;
+  });
+
+  window.addEventListener('mouseup', () => {
+    if (isMouseDown) {
+      isMouseDown = false;
+      wrap.classList.remove('cursor-grabbing');
+      wrap.style.scrollBehavior = '';
+    }
+  });
+
+  // Sticky Column Touch Forwarder (Ensures swipe starting on sticky column flows smoothly)
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchStartScroll = 0;
+  let isStickySwipe = false;
+  let rafId = null;
+
+  wrap.addEventListener('touchstart', (e) => {
+    if (e.touches.length !== 1) return;
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+    touchStartScroll = wrap.scrollLeft;
+    isStickySwipe = false;
+    const isSticky = e.target && e.target.closest && (e.target.closest('.sticky-col') || e.target.closest('.sticky'));
+    if (isSticky) {
+      isStickySwipe = true;
+      wrap.style.scrollBehavior = 'auto';
+    }
+  }, { passive: true });
+
+  wrap.addEventListener('touchmove', (e) => {
+    if (!isStickySwipe || e.touches.length !== 1) return;
+    const diffX = e.touches[0].clientX - touchStartX;
+    const diffY = e.touches[0].clientY - touchStartY;
+
+    if (Math.abs(diffX) > Math.abs(diffY)) {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        wrap.scrollLeft = touchStartScroll - diffX;
+      });
+    }
+  }, { passive: true });
+
+  wrap.addEventListener('touchend', () => {
+    isStickySwipe = false;
+    wrap.style.scrollBehavior = '';
+  }, { passive: true });
+}
+
+// Auto init on page load for desktop / resize
+document.addEventListener('DOMContentLoaded', () => {
+  initTableDragAndSwipe();
+});
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+  initTableDragAndSwipe();
+}
+</script>
 </section>
 <!-- Section 8: The Anti-Agency Standard -->
 <section class="py-24 bg-[#0B1120] border-t border-white/10 scroll-mt-24" id="fit">
@@ -2122,13 +2639,13 @@ AEO Dominance Metric
             </div>
 
             <!-- Founder Content & Philosophy -->
-            <div class="flex-1 text-center lg:text-left">
+            <div class="w-full min-w-0 max-w-full flex-1 text-center lg:text-left">
                 <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-coral font-bold text-xs tracking-widest uppercase mb-4 border border-white/10 backdrop-blur-sm">
                     <span class="w-2 h-2 rounded-full bg-coral"></span>
                     Founder &amp; Strategy
                 </div>
                 <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-2 text-white">Eric Coleman</h2>
-                <p class="text-blue-300 font-medium text-base mb-6">Head of Strategy &amp; Founder &bull; RedGrowth.partners</p>
+                <p class="text-blue-300 font-medium text-base mb-6">Head of Strategy &amp; Founder</p>
 
                 <p class="text-slate-300 text-base sm:text-lg leading-relaxed mb-6">
                     "Most marketing agencies treat Reddit like Facebook Ads or Twitter: spamming promotional links, buying fake upvotes, and wondering why accounts get banned within 72 hours. We built RedGrowth on a fundamentally different truth: <span class="text-white font-semibold">authentic human consensus is the only currency AI search engines respect.</span>"
@@ -2139,23 +2656,18 @@ AEO Dominance Metric
                 </p>
 
                 <!-- Founder Audio Memo & Thesis Widget -->
-                <div class="mb-8 p-4 sm:p-5 rounded-2xl bg-[#070B14]/90 border border-white/10 shadow-lg">
-                  <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 mb-3">
-                    <div class="flex items-center gap-3 w-full sm:w-auto">
-                      <button type="button" id="btnFounderAudio" aria-label="Play Founder Thesis Audio" class="w-12 h-12 rounded-full bg-coral text-[#0B1120] flex items-center justify-center shrink-0 hover:bg-orange-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral shadow-md btn-interactive touch-manipulation active:scale-95">
-                        <svg class="w-5 h-5 play-icon fill-current ml-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                        <svg class="w-5 h-5 pause-icon fill-current hidden" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-                      </button>
-                      <div class="text-left">
-                        <div class="text-sm font-bold text-white flex items-center gap-2">
-                          <span>Why We Built RedGrowth</span>
-                          <span class="text-[10px] px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-mono font-bold">52s Audio Memo</span>
-                        </div>
-                        <div class="text-xs text-slate-400">Authentic human consensus as the primary AI currency</div>
-                      </div>
+                <div class="mb-8 p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-[#0c1322]/95 via-[#070B14]/95 to-[#0b101c]/95 border border-white/10 shadow-xl backdrop-blur-sm relative overflow-hidden">
+                  <!-- Subtle top accent highlight -->
+                  <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-coral/30 to-transparent"></div>
+
+                  <!-- Header Micro-Row: Badge + Equalizer -->
+                  <div class="flex items-center justify-between gap-2 mb-3 pb-2.5 border-b border-white/5">
+                    <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 font-mono text-[10px] font-bold tracking-wide uppercase">
+                      <span class="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
+                      <span>Founder Audio Memo</span>
                     </div>
                     <!-- Equalizer soundwave visualizer -->
-                    <div class="flex items-center gap-1.5 h-7 px-3 py-1 rounded-lg bg-black/40 border border-white/5 self-end sm:self-center" id="audioEqualizer" aria-hidden="true">
+                    <div class="flex items-end justify-center gap-1 h-5 px-2 py-0.5 rounded-lg bg-black/40 border border-white/10 shrink-0" id="audioEqualizer" aria-hidden="true">
                       <div class="w-1 bg-coral rounded-full h-2 transition-all duration-150"></div>
                       <div class="w-1 bg-coral-light rounded-full h-3 transition-all duration-150"></div>
                       <div class="w-1 bg-blue-400 rounded-full h-4 transition-all duration-150"></div>
@@ -2164,22 +2676,37 @@ AEO Dominance Metric
                     </div>
                   </div>
 
+                  <!-- Main Player Row: Play Button + Titles -->
+                  <div class="flex items-center gap-3.5 mb-3.5">
+                    <!-- Play / Pause Button -->
+                    <button type="button" id="btnFounderAudio" aria-label="Play Founder Thesis Audio" class="w-12 h-12 rounded-full bg-gradient-to-tr from-coral to-[#FF8266] text-[#0B1120] flex items-center justify-center shrink-0 hover:brightness-110 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral shadow-lg shadow-coral/25 active:scale-95 touch-manipulation">
+                      <svg class="w-5 h-5 play-icon fill-current ml-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="w-5 h-5 pause-icon fill-current hidden" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                    </button>
+
+                    <!-- Text & Meta Info -->
+                    <div class="flex-1 min-w-0 text-left">
+                      <h4 class="text-sm sm:text-base font-bold text-white tracking-tight leading-snug">Why We Built RedGrowth</h4>
+                      <p class="text-xs text-slate-400 leading-tight mt-0.5">Authentic human consensus as the primary AI currency</p>
+                    </div>
+                  </div>
+
                   <!-- Audio Scrubber / Progress -->
-                  <div class="space-y-1.5 pt-1">
-                    <div class="w-full py-2 cursor-pointer touch-manipulation group" id="audioScrubber" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Audio progress">
-                      <div class="w-full bg-slate-800 rounded-full h-2 relative overflow-hidden">
-                        <div class="bg-coral h-full rounded-full transition-all duration-100" id="audioProgressBar" style="width: 0%"></div>
+                  <div class="space-y-1.5 pt-0.5">
+                    <div class="w-full py-1.5 cursor-pointer touch-manipulation group" id="audioScrubber" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Audio progress">
+                      <div class="w-full bg-slate-800/80 rounded-full h-2 relative overflow-hidden border border-white/5">
+                        <div class="bg-gradient-to-r from-coral to-[#FF8266] h-full rounded-full transition-all duration-100" id="audioProgressBar" style="width: 0%"></div>
                       </div>
                     </div>
                     <div class="flex justify-between items-center text-[11px] font-mono text-slate-400">
-                      <span id="audioCurrentTime">0:00</span>
-                      <button type="button" id="btnToggleTranscript" class="text-blue-400 hover:text-white underline transition-colors font-sans text-xs py-1 px-2 rounded touch-manipulation">Read Transcript</button>
-                      <span>0:52</span>
+                      <span id="audioCurrentTime" class="tabular-nums">0:00</span>
+                      <button type="button" id="btnToggleTranscript" class="text-blue-400 hover:text-white transition-colors font-sans text-xs py-0.5 px-2.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 touch-manipulation">Read Transcript</button>
+                      <span class="tabular-nums">0:52</span>
                     </div>
                   </div>
 
                   <!-- Expandable Audio Transcript -->
-                  <div id="audioTranscript" class="hidden mt-4 pt-4 border-t border-white/10 text-xs sm:text-sm text-slate-300 italic leading-relaxed text-left bg-black/30 p-3.5 sm:p-4 rounded-xl border border-white/5">
+                  <div id="audioTranscript" class="hidden mt-3.5 pt-3.5 border-t border-white/10 text-xs sm:text-sm text-slate-300 italic leading-relaxed text-left bg-black/40 p-3.5 sm:p-4 rounded-xl border border-white/5">
                     "When most marketing agencies pitch Reddit or AI Search, they treat it like Facebook Ads: blasting spam links and getting banned within 48 hours. But ChatGPT, Perplexity, and Google AI Overviews don't read marketing blogs—they read authentic human consensus. We engineer real, brand-safe community consensus so your company is the verified recommendation when high-intent buyers evaluate category solutions. 100% FTC compliant. No bots. Let's talk about your category."
                   </div>
                 </div>
@@ -2734,6 +3261,20 @@ function copyClaudePrompt(btn) {
             if (outPipeline) outPipeline.textContent = `+$${annualPipeline.toLocaleString()} / yr`;
             if (outArr) outArr.textContent = `$${annualArr.toLocaleString()}/yr`;
             if (outPayback) outPayback.textContent = paybackText;
+
+            // Highlight active presets with responsive visual feedback
+            document.querySelectorAll('.calc-acv-preset').forEach(btn => {
+                const isActive = parseInt(btn.dataset.value, 10) === acv;
+                btn.classList.toggle('active-coral', isActive);
+            });
+            document.querySelectorAll('.calc-demos-preset').forEach(btn => {
+                const isActive = parseInt(btn.dataset.value, 10) === demos;
+                btn.classList.toggle('active-blue', isActive);
+            });
+            document.querySelectorAll('.calc-cac-preset').forEach(btn => {
+                const isActive = parseInt(btn.dataset.value, 10) === cac;
+                btn.classList.toggle('active-emerald', isActive);
+            });
         }
 
         [acvInput, demosInput, cacInput].forEach(inp => {
