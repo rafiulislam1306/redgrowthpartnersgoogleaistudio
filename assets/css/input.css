@@ -135,9 +135,9 @@
   }
   .nav-pill-item {
     position: relative;
-    padding: 0.35rem 0.75rem;
+    padding: 0.35rem 0.55rem;
     border-radius: 9999px;
-    font-size: 0.8125rem;
+    font-size: 0.78125rem;
     font-weight: 500;
     color: #cbd5e1;
     white-space: nowrap;
@@ -164,12 +164,12 @@
     align-items: center;
     justify-content: center;
     gap: 0.45rem;
-    padding: 0.5rem 1.15rem;
+    padding: 0.42rem 0.85rem;
     border-radius: 9999px;
     background: #FF6441;
     background: linear-gradient(135deg, #FF6441 0%, #FF5024 100%);
     color: #ffffff !important;
-    font-size: 0.8125rem;
+    font-size: 0.78125rem;
     font-weight: 700;
     letter-spacing: -0.01em;
     border: 1px solid rgba(255, 255, 255, 0.25);
@@ -179,6 +179,12 @@
     text-decoration: none;
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
+  }
+  @media (min-width: 1280px) {
+    .nav-cta-btn {
+      padding: 0.5rem 1.15rem;
+      font-size: 0.8125rem;
+    }
   }
   .nav-cta-btn:hover {
     background: linear-gradient(135deg, #FF7654 0%, #FF6441 100%);

@@ -88,8 +88,9 @@
 </head>
 <body class="font-sans bg-[#0B1120] text-slate-100 min-h-screen flex flex-col relative overflow-x-hidden selection:bg-coral selection:text-[#0B1120] pb-20 md:pb-0">
 <!-- Top Navigation Bar -->
-<header class="sticky top-0 z-50 bg-[#0B1120]/85 backdrop-blur-xl border-b border-white/[0.08] transition-all">
-<div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between gap-4 relative">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-[#0B1120]/90 backdrop-blur-xl border-b border-white/[0.08] transition-all relative">
+<div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 h-16 sm:h-20 flex items-center justify-between gap-3 sm:gap-4">
 <!-- Left: Logo -->
 <a aria-label="RedGrowth.partners Home" class="flex items-center gap-2.5 cursor-pointer shrink-0 group focus:outline-none focus-visible:ring-2 focus-visible:ring-coral rounded-xl py-1" href="/">
 <div class="relative flex items-center justify-center">
@@ -114,30 +115,31 @@ RedGrowth<span class="font-normal text-slate-400">.partners</span>
 </nav>
 
 <!-- Right: High-Conversion Solid CTA & Mobile Controls -->
-<div class="flex items-center gap-2.5 sm:gap-3">
-<!-- Desktop & Tablet CTA Button -->
-<a class="nav-cta-btn btn-interactive group" href="#audit">
+<div class="flex items-center gap-2 sm:gap-3 shrink-0">
+<!-- Desktop & Tablet CTA Button (hidden on mobile < 640px to preserve hamburger button and logo fit) -->
+<a class="hidden sm:inline-flex nav-cta-btn btn-interactive group" href="#audit">
 <svg class="w-3.5 h-3.5 text-white/95 group-hover:rotate-12 transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24">
 <path d="M12 3v18"></path><path d="M3 12h18"></path><path d="m8 8 8 8"></path><path d="m16 8-8 8"></path>
 </svg>
-<span class="hidden sm:inline">Run AI Visibility Check</span>
-<span class="sm:hidden">Run AI Check</span>
+<span class="hidden xl:inline">Run AI Visibility Check</span>
+<span class="xl:hidden">Run AI Check</span>
 <span class="text-white/80 group-hover:translate-x-0.5 transition-transform duration-200">→</span>
 </a>
 
 <!-- Mobile Hamburger Button -->
-<button aria-expanded="false" aria-label="Toggle Navigation Menu" class="lg:hidden min-w-[42px] min-h-[42px] flex items-center justify-center p-2 rounded-xl text-white bg-white/[0.04] hover:bg-white/10 border border-white/10 active:scale-95 transition-all touch-manipulation focus:outline-none focus-visible:ring-2 focus-visible:ring-coral" id="mobileMenuBtn" type="button">
-<svg class="w-5 h-5 transition-transform duration-200" fill="none" id="hamburgerIcon" stroke="currentColor" viewbox="0 0 24 24">
+<button aria-expanded="false" aria-label="Toggle Navigation Menu" class="lg:hidden min-w-[44px] min-h-[44px] flex items-center justify-center p-2 rounded-xl text-white bg-white/[0.04] hover:bg-white/10 border border-white/10 active:scale-95 transition-all touch-manipulation focus:outline-none focus-visible:ring-2 focus-visible:ring-coral shrink-0" id="mobileMenuBtn" type="button">
+<svg class="w-6 h-6 transition-transform duration-200" fill="none" id="hamburgerIcon" stroke="currentColor" viewbox="0 0 24 24">
 <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 </svg>
-<svg class="w-5 h-5 hidden transition-transform duration-200" fill="none" id="closeIcon" stroke="currentColor" viewbox="0 0 24 24">
+<svg class="w-6 h-6 hidden transition-transform duration-200" fill="none" id="closeIcon" stroke="currentColor" viewbox="0 0 24 24">
 <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 </svg>
 </button>
 </div>
+</div>
 
-<!-- Mobile Drawer -->
-<div class="hidden absolute top-full left-0 w-full max-h-[calc(100vh-76px)] overflow-y-auto bg-[#0B1120]/98 backdrop-blur-2xl shadow-2xl border-b border-white/10 px-5 py-5 flex-col gap-1 z-[60] lg:hidden transform transition-all duration-300 origin-top divide-y divide-white/5" id="mobileMenu">
+<!-- Mobile Drawer (Full width, positioned directly under header) -->
+<div class="hidden absolute top-full left-0 w-full max-h-[calc(100vh-64px)] sm:max-h-[calc(100vh-80px)] overflow-y-auto bg-[#0B1120]/98 backdrop-blur-2xl shadow-2xl border-b border-white/10 px-5 py-5 flex-col gap-1 z-50 lg:hidden transform transition-all duration-300 origin-top divide-y divide-white/5" id="mobileMenu">
 <a class="mobile-nav-link flex items-center justify-between text-base font-semibold text-slate-200 hover:text-coral py-3 px-2 rounded-lg hover:bg-white/5 transition-all touch-manipulation min-h-[48px]" href="#framework">
   <span>AEO Framework</span>
   <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
@@ -179,9 +181,8 @@ Run AI Visibility Check →
 </a>
 </div>
 </div>
-</div>
 </header>
-<div id="mobileMenuBackdrop" class="fixed inset-0 bg-[#0B1120]/80 backdrop-blur-md z-[55] hidden lg:hidden" aria-hidden="true"></div>
+<div id="mobileMenuBackdrop" class="fixed inset-0 bg-[#0B1120]/75 backdrop-blur-sm z-40 hidden lg:hidden" aria-hidden="true"></div>
 <!-- Hero Wrapper -->
 <div class="relative w-full min-h-screen flex flex-col overflow-hidden">
 <!-- Background Layers -->
@@ -1234,19 +1235,35 @@ AEO Dominance Metric
     </div>
 
     <!-- Interactive Sprint Selector Tabs -->
-    <div class="flex items-center justify-start sm:justify-center mb-8 sm:mb-10 overflow-x-auto pb-3 pt-1 px-4 sm:px-0 scrollbar-none snap-x snap-mandatory touch-manipulation -mx-4 sm:mx-0" role="tablist" aria-label="30-Day Roadmap Sprints">
-      <div class="inline-flex p-1.5 rounded-2xl bg-[#15213A]/90 border border-white/10 backdrop-blur-md gap-1.5 sm:gap-2 min-w-max mx-auto sm:mx-0">
-        <button id="tabSprint1" role="tab" aria-selected="true" aria-controls="panelSprint1" class="sprint-tab whitespace-nowrap shrink-0 snap-start px-3.5 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-coral text-[#0B1120] shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral active:scale-95 touch-manipulation">
-          Days 1–7 • Reconnaissance
+    <div class="flex items-center justify-center mb-8 sm:mb-10 px-4 sm:px-6 lg:px-0" role="tablist" aria-label="30-Day Roadmap Sprints">
+      <div class="grid grid-cols-4 lg:inline-flex lg:flex-row p-1 sm:p-1.5 rounded-2xl bg-[#15213A]/90 border border-white/10 backdrop-blur-md gap-1 sm:gap-2 w-full max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-none lg:w-auto mx-auto lg:min-w-max">
+        <button id="tabSprint1" role="tab" aria-selected="true" aria-controls="panelSprint1" class="sprint-tab flex items-center justify-center text-center px-1.5 py-2 sm:px-3 sm:py-2.5 lg:px-4 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-coral text-[#0B1120] shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral active:scale-95 touch-manipulation">
+          <span class="lg:hidden flex flex-col items-center justify-center leading-tight">
+            <span class="text-[11px] sm:text-xs md:text-[13px] font-bold tracking-tight whitespace-nowrap">Sprint 1</span>
+            <span class="text-[9px] sm:text-[11px] opacity-80 font-mono mt-0.5 whitespace-nowrap">Days 1–7</span>
+          </span>
+          <span class="hidden lg:inline whitespace-nowrap">Days 1–7 • Reconnaissance</span>
         </button>
-        <button id="tabSprint2" role="tab" aria-selected="false" aria-controls="panelSprint2" class="sprint-tab whitespace-nowrap shrink-0 snap-start px-3.5 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all text-slate-300 hover:text-white hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral active:scale-95 touch-manipulation">
-          Days 8–14 • Governance
+        <button id="tabSprint2" role="tab" aria-selected="false" aria-controls="panelSprint2" class="sprint-tab flex items-center justify-center text-center px-1.5 py-2 sm:px-3 sm:py-2.5 lg:px-4 rounded-xl text-xs sm:text-sm font-semibold transition-all text-slate-300 hover:text-white hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral active:scale-95 touch-manipulation">
+          <span class="lg:hidden flex flex-col items-center justify-center leading-tight">
+            <span class="text-[11px] sm:text-xs md:text-[13px] font-bold tracking-tight whitespace-nowrap">Sprint 2</span>
+            <span class="text-[9px] sm:text-[11px] opacity-80 font-mono mt-0.5 whitespace-nowrap">Days 8–14</span>
+          </span>
+          <span class="hidden lg:inline whitespace-nowrap">Days 8–14 • Governance</span>
         </button>
-        <button id="tabSprint3" role="tab" aria-selected="false" aria-controls="panelSprint3" class="sprint-tab whitespace-nowrap shrink-0 snap-start px-3.5 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all text-slate-300 hover:text-white hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral active:scale-95 touch-manipulation">
-          Days 15–24 • Seeding
+        <button id="tabSprint3" role="tab" aria-selected="false" aria-controls="panelSprint3" class="sprint-tab flex items-center justify-center text-center px-1.5 py-2 sm:px-3 sm:py-2.5 lg:px-4 rounded-xl text-xs sm:text-sm font-semibold transition-all text-slate-300 hover:text-white hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral active:scale-95 touch-manipulation">
+          <span class="lg:hidden flex flex-col items-center justify-center leading-tight">
+            <span class="text-[11px] sm:text-xs md:text-[13px] font-bold tracking-tight whitespace-nowrap">Sprint 3</span>
+            <span class="text-[9px] sm:text-[11px] opacity-80 font-mono mt-0.5 whitespace-nowrap">Days 15–24</span>
+          </span>
+          <span class="hidden lg:inline whitespace-nowrap">Days 15–24 • Seeding</span>
         </button>
-        <button id="tabSprint4" role="tab" aria-selected="false" aria-controls="panelSprint4" class="sprint-tab whitespace-nowrap shrink-0 snap-start px-3.5 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all text-slate-300 hover:text-white hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral active:scale-95 touch-manipulation">
-          Days 25–30 • Citation Lift
+        <button id="tabSprint4" role="tab" aria-selected="false" aria-controls="panelSprint4" class="sprint-tab flex items-center justify-center text-center px-1.5 py-2 sm:px-3 sm:py-2.5 lg:px-4 rounded-xl text-xs sm:text-sm font-semibold transition-all text-slate-300 hover:text-white hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral active:scale-95 touch-manipulation">
+          <span class="lg:hidden flex flex-col items-center justify-center leading-tight">
+            <span class="text-[11px] sm:text-xs md:text-[13px] font-bold tracking-tight whitespace-nowrap">Sprint 4</span>
+            <span class="text-[9px] sm:text-[11px] opacity-80 font-mono mt-0.5 whitespace-nowrap">Days 25–30</span>
+          </span>
+          <span class="hidden lg:inline whitespace-nowrap">Days 25–30 • Citation Lift</span>
         </button>
       </div>
     </div>
