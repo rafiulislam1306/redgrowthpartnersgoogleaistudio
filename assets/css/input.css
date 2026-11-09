@@ -115,6 +115,81 @@
   .soundwave-bar:nth-child(3) { animation-delay: 0.4s; }
   .soundwave-bar:nth-child(4) { animation-delay: 0.1s; }
   .soundwave-bar:nth-child(5) { animation-delay: 0.3s; }
+
+  /* Navbar Floating Glass Pill Navigation */
+  .nav-glass-pill {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.35), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 9999px;
+    padding: 0.25rem 0.375rem;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+  }
+  .nav-glass-pill:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.06);
+  }
+  .nav-pill-item {
+    position: relative;
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: #cbd5e1;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  @media (min-width: 1280px) {
+    .nav-pill-item {
+      padding: 0.375rem 0.9375rem;
+      font-size: 0.84375rem;
+    }
+  }
+  .nav-pill-item:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.09);
+  }
+  .nav-pill-item:active {
+    transform: scale(0.97);
+  }
+
+  /* Refined Navbar Solid CTA (Clean, authoritative, non-distracting) */
+  .nav-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    padding: 0.5rem 1.15rem;
+    border-radius: 9999px;
+    background: #FF6441;
+    background: linear-gradient(135deg, #FF6441 0%, #FF5024 100%);
+    color: #ffffff !important;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 2px 14px -1px rgba(255, 100, 65, 0.45), inset 0 1px 0 0 rgba(255, 255, 255, 0.35);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    white-space: nowrap;
+    text-decoration: none;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .nav-cta-btn:hover {
+    background: linear-gradient(135deg, #FF7654 0%, #FF6441 100%);
+    box-shadow: 0 4px 22px 0 rgba(255, 100, 65, 0.65), inset 0 1px 0 0 rgba(255, 255, 255, 0.45);
+    transform: translateY(-1px);
+    color: #ffffff !important;
+  }
+  .nav-cta-btn:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 2px 8px 0 rgba(255, 100, 65, 0.4);
+  }
 }
 
 @layer utilities {
