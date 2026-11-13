@@ -117,45 +117,71 @@
   .soundwave-bar:nth-child(5) { animation-delay: 0.3s; }
 
   /* Navbar Floating Glass Pill Navigation */
+  /* Navbar Floating Glass Pill Navigation (Engineered for Computer Screens & Desktops) */
   .nav-glass-pill {
     display: inline-flex;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.35), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background-color: rgba(21, 33, 58, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: 9999px;
-    padding: 0.25rem 0.375rem;
-    transition: border-color 0.2s ease, background-color 0.2s ease;
+    padding: 0.28rem 0.35rem;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .nav-glass-pill:hover {
-    border-color: rgba(255, 255, 255, 0.15);
-    background-color: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(21, 33, 58, 0.9);
   }
   .nav-pill-item {
     position: relative;
-    padding: 0.35rem 0.55rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.32rem 0.6rem;
     border-radius: 9999px;
     font-size: 0.78125rem;
     font-weight: 500;
-    color: #cbd5e1;
+    color: #94a3b8;
     white-space: nowrap;
     text-decoration: none;
     transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
   }
   @media (min-width: 1280px) {
     .nav-pill-item {
-      padding: 0.375rem 0.9375rem;
+      padding: 0.38rem 0.8rem;
+      font-size: 0.8125rem;
+    }
+  }
+  @media (min-width: 1536px) {
+    .nav-pill-item {
+      padding: 0.42rem 0.95rem;
       font-size: 0.84375rem;
     }
   }
   .nav-pill-item:hover {
     color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.09);
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+  .nav-pill-item.active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.14);
+    font-weight: 600;
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
   }
   .nav-pill-item:active {
     transform: scale(0.97);
+  }
+
+  /* Unboxed Nav Item for Desktop Navigation */
+  .nav-item {
+    transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .nav-item.active {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.12);
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+    font-weight: 600;
   }
 
   /* Refined Navbar Solid CTA (Clean, authoritative, non-distracting) */
@@ -164,16 +190,16 @@
     align-items: center;
     justify-content: center;
     gap: 0.45rem;
-    padding: 0.42rem 0.85rem;
+    padding: 0.45rem 1rem;
     border-radius: 9999px;
     background: #FF6441;
     background: linear-gradient(135deg, #FF6441 0%, #FF5024 100%);
     color: #ffffff !important;
-    font-size: 0.78125rem;
+    font-size: 0.8125rem;
     font-weight: 700;
     letter-spacing: -0.01em;
     border: 1px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 2px 14px -1px rgba(255, 100, 65, 0.45), inset 0 1px 0 0 rgba(255, 255, 255, 0.35);
+    box-shadow: 0 2px 14px -1px rgba(255, 100, 65, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
     transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     white-space: nowrap;
     text-decoration: none;
@@ -182,13 +208,13 @@
   }
   @media (min-width: 1280px) {
     .nav-cta-btn {
-      padding: 0.5rem 1.15rem;
-      font-size: 0.8125rem;
+      padding: 0.5rem 1.25rem;
+      font-size: 0.84375rem;
     }
   }
   .nav-cta-btn:hover {
     background: linear-gradient(135deg, #FF7654 0%, #FF6441 100%);
-    box-shadow: 0 4px 22px 0 rgba(255, 100, 65, 0.65), inset 0 1px 0 0 rgba(255, 255, 255, 0.45);
+    box-shadow: 0 4px 22px 0 rgba(255, 100, 65, 0.6), inset 0 1px 0 0 rgba(255, 255, 255, 0.4);
     transform: translateY(-1px);
     color: #ffffff !important;
   }
