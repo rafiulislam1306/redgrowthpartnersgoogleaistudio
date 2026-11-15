@@ -14,3 +14,4 @@ Thumbs.db
 .agents/
 designmonks_raw.html
 test_screenshots/
+.playwright-cli/
