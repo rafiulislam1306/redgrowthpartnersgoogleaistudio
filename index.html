@@ -358,7 +358,7 @@ RedGrowth
     <svg class="w-2.5 h-2.5 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2.75" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
   </span>
   <p>
-    Grounded in <span class="text-slate-300 font-medium">Google ($60M/yr)</span> &amp; <span class="text-slate-300 font-medium">OpenAI ($70M/yr)</span> Licensing <span class="text-slate-600 mx-0.5" aria-hidden="true">·</span> <span class="text-slate-300 font-medium whitespace-nowrap">Princeton GEO-Bench Protocol</span>
+    Grounded in <span class="text-slate-300 font-medium">Google ($60M/yr)</span> &amp; <span class="text-slate-300 font-medium">OpenAI ($70M/yr)</span> Licensing <span class="text-slate-600 mx-0.5" aria-hidden="true">·</span> <span class="text-slate-300 font-medium whitespace-nowrap">GEO Citation Research</span>
   </p>
 </div>
 </div>
@@ -977,7 +977,7 @@ RedGrowth
     Buyers are bypassing traditional search ads, turning to ChatGPT, Perplexity, and Google AI Overviews to evaluate category software. To power these answers with authentic human consensus, both <span class="text-white font-semibold tabular-nums">Google ($60M/year)</span> and <span class="text-white font-semibold tabular-nums">OpenAI ($70M/year)</span> established landmark real-time licensing partnerships with Reddit.
   </p>
   <p>
-    Landmark research from <span class="text-white font-semibold">Princeton University and Georgia Tech (GEO-bench)</span> demonstrated that authentic third-party consensus and verified citations boost generative engine visibility by up to <span class="text-emerald-400 font-bold tabular-nums">+40%</span>. Meanwhile, the median B2B SaaS brand suffers a <span class="text-coral-light font-bold tabular-nums">70% invisibility gap</span> in AI search because LLMs actively discard self-serving corporate blogs in favor of peer discussions.
+    Research from <span class="text-white font-semibold">Princeton University and Georgia Tech (GEO-bench)</span> demonstrated that adding <span class="text-white font-semibold">explicit source citations, verifiable statistics, and authoritative references</span> boosts generative engine visibility by up to <span class="text-emerald-400 font-bold tabular-nums">+40%</span>. Meanwhile, the median B2B SaaS brand suffers a <span class="text-coral-light font-bold tabular-nums">70% invisibility gap</span> in AI search because retrieval systems prioritize independent peer discussions and cited evidence over self-serving marketing blogs.
   </p>
 </div>
 <div class="relative overflow-hidden flex items-start sm:items-center gap-3.5 sm:gap-4 bg-[#0C1322]/95 rounded-2xl border border-white/[0.09] p-4 sm:px-5 sm:py-[18px] w-full shadow-[0_14px_34px_-12px_rgba(0,0,0,0.5)]">
@@ -1012,7 +1012,7 @@ RedGrowth
     <!-- Interactive Tab Switcher -->
     <div class="grid grid-cols-3 gap-1 p-1 bg-[#0B1120] border border-white/[0.08] rounded-xl" role="tablist" aria-label="Citation Proof Switcher">
       <button type="button" id="tabGoogleProof" class="proof-tab-btn min-h-[34px] px-2 sm:px-2.5 py-1.5 text-[11.5px] sm:text-xs font-semibold rounded-lg bg-white/15 text-white shadow-sm whitespace-nowrap transition-colors btn-interactive" role="tab" aria-selected="true" aria-controls="panelGoogleProof">
-        Google AI<span class="hidden sm:inline"> Overview</span>
+        Google<span class="hidden sm:inline"> Search Rank</span>
       </button>
       <button type="button" id="tabRedditProof" class="proof-tab-btn min-h-[34px] px-2 sm:px-2.5 py-1.5 text-[11.5px] sm:text-xs font-medium text-slate-400 hover:text-white rounded-lg whitespace-nowrap transition-colors btn-interactive" role="tab" aria-selected="false" aria-controls="panelRedditProof">
         Reddit<span class="hidden sm:inline"> Source</span>
@@ -1024,19 +1024,21 @@ RedGrowth
   </div>
   <!-- Card Body: Proof Screenshots & Interactive Simulator -->
   <div class="p-3.5 sm:p-5 bg-[#0A101E]">
-    <!-- Google AI Overview Panel -->
+    <!-- Google Search Rank Panel -->
     <div id="panelGoogleProof" class="w-full transition-opacity duration-200 opacity-100" role="tabpanel" aria-labelledby="tabGoogleProof">
       <div class="rounded-xl overflow-hidden border border-white/[0.08] bg-[#070B14] shadow-inner">
-        <img src="assets/images/google-rank-ai-overview-desktop.webp"
-             alt="Google AI Overview citing Reddit consensus"
-             class="w-full h-auto block object-cover"
-             loading="lazy" width="1208" height="690" />
+        <div class="bg-white py-4 sm:py-6">
+          <img src="assets/images/google-rank-desktop.webp"
+               alt="Google Search organic page-1 ranking for a Reddit community discussion thread"
+               class="w-full h-auto block object-contain"
+               loading="lazy" width="1208" height="394" />
+        </div>
         <div class="bg-[#080D1A] border-t border-white/[0.08] px-3.5 py-2.5 flex items-center justify-between gap-3 text-xs">
           <span class="flex items-center gap-1.5 font-medium text-slate-100 truncate">
             <svg class="w-3.5 h-3.5 text-blue-400 shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-            Google AI Overview Citation #1
+            Google Page-1 Reddit Citation
           </span>
-          <span class="text-[11px] font-mono text-blue-300 shrink-0">Verified Result</span>
+          <span class="text-[11px] font-mono text-blue-300 shrink-0">Organic SERP</span>
         </div>
       </div>
     </div>
@@ -1062,7 +1064,7 @@ RedGrowth
         <div class="flex flex-col xl:flex-row xl:items-center justify-between gap-2.5 pb-3 border-b border-white/[0.08]">
           <div class="flex items-center gap-2 text-[11px] font-mono text-emerald-400 whitespace-nowrap">
             <svg class="w-3.5 h-3.5 text-emerald-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-            <span id="simEngineLabel">ChatGPT 4o · Perplexity Live</span>
+            <span id="simEngineLabel">ChatGPT Search · Perplexity Live</span>
           </div>
           <div class="flex items-center gap-1.5 shrink-0" id="simCategoryPills">
             <button type="button" class="sim-pill px-2.5 py-1 text-[11px] font-mono font-semibold rounded-md bg-coral text-[#0B1120] whitespace-nowrap btn-interactive" data-scenario="devsecops">DevSecOps</button>
@@ -1550,7 +1552,7 @@ RedGrowth
               <li class="py-3.5 flex items-start gap-3">
                 <svg class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
                 <div class="text-[13.5px] sm:text-[14px] text-slate-300 leading-[1.55] tabular-nums">
-                  <strong class="text-white font-semibold">AI Search Baseline Audit:</strong> 30 benchmark queries tested across ChatGPT 4o, Perplexity Pro, and Gemini to log where competitors currently outrank you.
+                  <strong class="text-white font-semibold">AI Search Baseline Audit:</strong> 30 benchmark queries tested across ChatGPT Search, Perplexity Pro, and Gemini to log where competitors currently outrank you.
                 </div>
               </li>
               <li class="pt-3.5 flex items-start gap-3">
@@ -1998,7 +2000,7 @@ RedGrowth
         <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"></path>
       </svg>
     </div>
-    <p class="text-[13px] sm:text-[13.5px] text-slate-200/95 italic leading-[1.6]">"We transitioned the client from broad informational SEO to high-intent AEO content. By seeding targeted third-party validation on Reddit, we secured a 600% citation uplift in Perplexity and ChatGPT for 'enterprise alternatives to legacy competitors.'"</p>
+    <p class="text-[13px] sm:text-[13.5px] text-slate-200/95 italic leading-[1.6]">"We transitioned the client from broad informational SEO to high-intent AEO content. By seeding targeted third-party validation on Reddit, we secured a 6x citation lift in Perplexity and ChatGPT for 'enterprise alternatives to legacy competitors.'"</p>
   </div>
 </div>
 <!-- Impact Card 2: E-Commerce -->
@@ -3240,7 +3242,7 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 <div>
 <h2 class="text-[28px] sm:text-[34px] lg:text-[38px] font-bold text-white tracking-[-0.02em] leading-[1.15] mb-4 sm:mb-5 text-balance">The <span class="font-serif italic font-normal text-coral pr-0.5 whitespace-nowrap">&ldquo;Anti-Agency&rdquo;</span> <span class="lg:block">Standard.</span></h2>
-<p class="text-slate-300 mb-10 leading-relaxed text-base sm:text-lg">We are fundamentally opposed to the bloated retainer models and opaque reporting of traditional digital marketing firms. We do not use automated posting machines or $5/hour offshore gig workers. We are AI-native growth architects.</p>
+<p class="text-slate-300 mb-10 leading-relaxed text-base sm:text-lg">We are fundamentally opposed to the bloated retainer models and opaque reporting of traditional digital marketing firms. We do not use automated posting machines or $5/hour offshore gig workers. We are AEO-native growth architects.</p>
 <div class="relative overflow-hidden bg-[#0C1322]/90 bg-gradient-to-b from-[#131F36]/90 to-[#0A101E]/95 p-6 sm:p-8 rounded-3xl border border-white/[0.09] shadow-[0_20px_50px_-15px_rgba(0,0,0,0.65),inset_0_1px_0_0_rgba(255,255,255,0.06)]">
 <span class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-rose-400/50 to-transparent" aria-hidden="true"></span>
 <div class="flex items-center justify-between gap-2 pb-5 mb-6 border-b border-white/[0.08]">
@@ -3489,7 +3491,7 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
                 </span>
             </summary>
             <div class="text-slate-300/95 px-4 sm:px-6 sm:pl-[4.5rem] pb-5 sm:pb-6 pt-3.5 text-[14px] sm:text-[15px] leading-[1.68] border-t border-white/[0.07]">
-                We strictly reject automated bots, spam link posting, and newly created sockpuppet accounts. Instead, we deploy established, aged Reddit persona accounts with years of karma history across relevant technical communities. Every engagement follows our strict 90/10 Rule: 90% objective technical value, unbranded context, and genuine community participation, with at most 10% commercial relevance. We never post raw affiliate links or blatant advertisements, guaranteeing 100% brand safety and zero account bans.
+                We strictly reject automated bots, spam link posting, and newly created sockpuppet accounts. Instead, we deploy established, aged Reddit persona accounts with years of karma history across relevant technical communities. Every engagement follows our strict 90/10 Rule: 90% objective technical value, unbranded context, and genuine community participation, with at most 10% commercial relevance. We never post raw affiliate links or blatant advertisements, supporting brand safety and keeping ban rates near zero (&lt;0.1% historical).
             </div>
         </details>
 
@@ -3569,7 +3571,7 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
                 </span>
             </summary>
             <div class="text-slate-300/95 px-4 sm:px-6 sm:pl-[4.5rem] pb-5 sm:pb-6 pt-3.5 text-[14px] sm:text-[15px] leading-[1.68] border-t border-white/[0.07]">
-                AI search models frequently adjust how aggressively they surface raw forum links versus direct entity summaries (such as ChatGPT Search's domain-specific shifts). We insulate your brand through a <strong>Dual-Vector AEO Architecture</strong> grounded in the Princeton GEO-bench findings: we combine off-page community consensus with on-page technical infrastructure (WebMCP, <code>llms.txt</code>, and JSON-LD schema entity mapping). When AI models evaluate your category, they cross-reference the off-page Reddit consensus with your machine-readable on-page schema, ensuring consistent citation dominance regardless of search retrieval fluctuations.
+                AI search models frequently adjust how aggressively they surface raw forum links versus direct entity summaries (such as ChatGPT Search's domain-specific shifts). We insulate your brand through a <strong>Dual-Vector AEO Architecture</strong> aligned with GEO research on citation and evidence density: we combine off-page community validation with on-page structured authority (WebMCP, <code>llms.txt</code>, verifiable statistics, and JSON-LD schema entity mapping). When AI models evaluate your category, they cross-reference independent Reddit discussions with your machine-readable on-page evidence, maintaining citation visibility across retrieval updates.
             </div>
         </details>
     </div>
