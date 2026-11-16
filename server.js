@@ -1,4 +1,5 @@
 const express = require('express');
+const compression = require('compression');
 const path = require('path');
 const fs = require('fs');
 
@@ -8,14 +9,27 @@ const HOST = '0.0.0.0';
 
 const rootDir = __dirname;
 
-// Serve static assets with HTML extension resolution and index fallback
+// Compress HTML, CSS, JS, JSON, and SVG payloads over the wire
+app.use(compression({ threshold: 1024 }));
+
+// Serve static assets with HTML extension resolution, cache control, and index fallback
 app.use(express.static(rootDir, {
   extensions: ['html'],
-  index: 'index.html'
+  index: 'index.html',
+  setHeaders: (res, filePath) => {
+    if (filePath.endsWith('.html')) {
+      res.setHeader('Cache-Control', 'no-cache');
+    } else if (/\.(?:webp|png|jpg|jpeg|svg|ico)$/i.test(filePath)) {
+      res.setHeader('Cache-Control', 'public, max-age=604800, stale-while-revalidate=86400');
+    } else if (/\.(?:css|js)$/i.test(filePath)) {
+      res.setHeader('Cache-Control', 'public, max-age=3600, must-revalidate');
+    }
+  }
 }));
 
 // Explicit root route
 app.get('/', (req, res, next) => {
+  res.setHeader('Cache-Control', 'no-cache');
   res.sendFile(path.join(rootDir, 'index.html'), (err) => {
     if (err && !res.headersSent) next(err);
   });

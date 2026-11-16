@@ -71,14 +71,14 @@ module.exports = {
           '0%': { opacity: 0 },
           '100%': { opacity: 1 },
         },
-        // Mathematically seamless marquee translation (0px loop jump)
+        // Mathematically seamless GPU-composited marquee translation (0px loop jump)
         marqueeLeft: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-50%)' },
+          '0%': { transform: 'translate3d(0%, 0, 0)' },
+          '100%': { transform: 'translate3d(-50%, 0, 0)' },
         },
         marqueeRight: {
-          '0%': { transform: 'translateX(-50%)' },
-          '100%': { transform: 'translateX(0%)' },
+          '0%': { transform: 'translate3d(-50%, 0, 0)' },
+          '100%': { transform: 'translate3d(0%, 0, 0)' },
         }
       }
     },
